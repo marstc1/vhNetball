@@ -38,7 +38,7 @@ const NetlifyRegistrationForm = () => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "register", values })
+          body: encode({ "form-name": "register", ...values })
         })
           .then(() => alert("Success!"))
           .catch(error => console.log(error));
@@ -75,13 +75,7 @@ const NetlifyRegistrationForm = () => {
           <div id='section3' className='section three'>
             <div className='container'>
               <h2>REGISTER</h2>
-              <form
-                name='register'
-                autoComplete='off'
-                onSubmit={handleSubmit}
-                method='post'
-                data-netlify='true'
-                dat-netlify-honeypot='bot-field'>
+              <form autoComplete='off' onSubmit={handleSubmit}>
                 <label htmlFor='teamName'>Team Name</label>
                 <input
                   type='text'
