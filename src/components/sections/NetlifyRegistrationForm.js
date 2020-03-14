@@ -3,6 +3,12 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 const NetlifyRegistrationForm = () => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const contactNumberValidation = Yup.string()
     .required("Please enter a contact number")
     .matches(
@@ -22,11 +28,20 @@ const NetlifyRegistrationForm = () => {
         secondaryEmail: "",
         isCompetitive: ""
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        // Todo: Link up to emailer
-        setTimeout(() => {
-          console.log("Sending form data ...", values);
-        }, 500);
+      onSubmit={(e, values, { setSubmitting }) => {
+        // // Todo: Link up to emailer
+        // setTimeout(() => {
+        //   console.log("Sending form data ...", values);
+        // }, 500);
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", values })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+
+        e.preventDefault();
       }}
       validationSchema={Yup.object().shape({
         teamName: Yup.string().required("Please enter a team name"),
@@ -65,7 +80,7 @@ const NetlifyRegistrationForm = () => {
                 autoComplete='off'
                 onSubmit={handleSubmit}
                 method='post'
-                netlify
+                data-netlify='true'
                 dat-netlify-honeypot='bot-field'>
                 <label htmlFor='teamName'>Team Name</label>
                 <input
