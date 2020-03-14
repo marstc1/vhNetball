@@ -4,6 +4,7 @@ import * as Yup from "yup";
 
 const NetlifyRegistrationForm = () => {
   const encode = data => {
+    console.log(data);
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
@@ -17,13 +18,13 @@ const NetlifyRegistrationForm = () => {
     );
 
   const initialValues = {
-    teamName: "",
-    contactName: "",
-    contactNumber: "",
-    email: "",
-    secondaryContactName: "",
-    secondaryContactNumber: "",
-    secondaryEmail: "",
+    teamName: "Test",
+    contactName: "Testing",
+    contactNumber: "01603 654654",
+    email: "test@email.com",
+    secondaryContactName: "Tester",
+    secondaryContactNumber: "01603 321321",
+    secondaryEmail: "testing@email.com",
     isCompetitive: ""
   };
 
@@ -34,7 +35,7 @@ const NetlifyRegistrationForm = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Registration", ...values })
+      body: encode({ "form-name": "registration", ...values })
     })
       .then(() => {
         resetForm({});
