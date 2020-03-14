@@ -28,11 +28,13 @@ const NetlifyRegistrationForm = () => {
         secondaryEmail: "",
         isCompetitive: ""
       }}
-      onSubmit={(e, values, { setSubmitting }) => {
+      onSubmit={(values, { setSubmitting }) => {
         // // Todo: Link up to emailer
         // setTimeout(() => {
         //   console.log("Sending form data ...", values);
         // }, 500);
+        console.log(values);
+
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -40,8 +42,6 @@ const NetlifyRegistrationForm = () => {
         })
           .then(() => alert("Success!"))
           .catch(error => console.log(error));
-
-        e.preventDefault();
       }}
       validationSchema={Yup.object().shape({
         teamName: Yup.string().required("Please enter a team name"),
