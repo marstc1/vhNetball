@@ -60,7 +60,11 @@ const RegistrationForm = () => {
           <div id='section3' className='section three'>
             <div className='container'>
               <h2>REGISTER</h2>
-              <form autoComplete='off' onSubmit={handleSubmit}>
+              <form
+                autoComplete='off'
+                onSubmit={handleSubmit}
+                action='POST'
+                data-netlify='true'>
                 <label htmlFor='teamName'>Team Name</label>
                 <input
                   type='text'
@@ -218,6 +222,10 @@ const RegistrationForm = () => {
                   {errors.isCompetitive && touched.isCompetitive && (
                     <div className='input-feedback'>{errors.isCompetitive}</div>
                   )}
+                </div>
+
+                <div class='field'>
+                  <div data-netlify-recaptcha='true'></div>
                 </div>
 
                 <button type='submit' disabled={isSubmitting}>
