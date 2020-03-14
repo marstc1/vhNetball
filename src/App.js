@@ -4,8 +4,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/sections/Header";
 import Victoria from "./components/sections/Victoria";
 import EventInfo from "./components/sections/EventInfo";
-import RegistrationForm from "./components/sections/RegistrationForm";
-import Registration from "./components/sections/Registration";
+import NetlifyRegistrationForm from "./components/sections/NetlifyRegistrationForm";
 
 import "./fonts/paulmaul-regular.woff";
 import "./App.css";
@@ -31,7 +30,7 @@ function App() {
         <Header />
         <Victoria />
         <EventInfo />
-        <RegistrationForm />
+        <NetlifyRegistrationForm />
         <Footer />
       </div>
     ),
