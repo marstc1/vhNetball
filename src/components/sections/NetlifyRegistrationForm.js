@@ -65,7 +65,7 @@ const NetlifyRegistrationForm = () => {
                 autoComplete='off'
                 onSubmit={handleSubmit}
                 method='post'
-                data-netlify='true'
+                netlify
                 dat-netlify-honeypot='bot-field'>
                 <label htmlFor='teamName'>Team Name</label>
                 <input
