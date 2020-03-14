@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NetlifyRegistrationForm from "./NetlifyRegistrationForm";
 
 export default class Registration extends Component {
   render() {
@@ -6,112 +7,14 @@ export default class Registration extends Component {
       <div id='section3' className='section three'>
         <div className='container'>
           <h2>Register</h2>
-          <form className='register-form'>
-            <div className='form-group pad-bottom-lg'>
-              <label htmlFor='size'>Team Name:</label>
-              <input
-                type='text'
-                name='teamName'
-                id='TeamName'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group'>
-              <label htmlFor='size'>Contact Name:</label>
-              <input
-                type='text'
-                name='contactName'
-                id='ContactmName'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group'>
-              <label htmlFor='size'>Contact Number:</label>
-              <input
-                type='text'
-                name='contactNumber'
-                id='ContactNumber'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group pad-bottom-lg'>
-              <label htmlFor='size'>Email Address:</label>
-              <input
-                type='text'
-                name='emailAddress'
-                id='EmailAdress'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group'>
-              <label htmlFor='size'>Contact Name:</label>
-              <input
-                type='text'
-                name='secondaryContactName'
-                id='SecondaryContactmName'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group'>
-              <label htmlFor='size'>Contact Number:</label>
-              <input
-                type='text'
-                name='secondaryContactNumber'
-                id='SecondaryContactNumber'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group pad-bottom-lg'>
-              <label htmlFor='size'>Email Address:</label>
-              <input
-                type='text'
-                name='secondaryEmailAddress'
-                id='SecondaryEmailAdress'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-
-            <div className='form-group'>
-              <label htmlFor='funY'>Fun</label>
-              <input
-                type='radio'
-                name='fun'
-                id='funY'
-                // value={minSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-              <label htmlFor='funY'>Competitive</label>
-              <input
-                type='radio'
-                name='fun'
-                id='funN'
-                // value={maxSize}
-                // onChange={handleChange}
-                className='size-input'
-              />
-            </div>
-          </form>
+          <NetlifyRegistrationForm />
+          <p>
+            Already registered? Visit our{" "}
+            <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
+              {" Just Giving "}
+            </a>{" "}
+            page to submit your entry fee.
+          </p>
         </div>
       </div>
     );
