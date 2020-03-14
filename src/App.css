@@ -1,38 +1,271 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* --primaryColor: #8bd71d; */
+  --primaryColor: #7ebf20;
+  --secondaryColor: #2c2135;
+  --secondaryColorRgb: 44, 33, 53;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainGrey: #333;
+  --mainBlack: #000;
+  --smallDarkShadow: 0px 2px 2px rgb(0, 0, 0, 0.8);
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  /*--mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5); */
+}
+
+@font-face {
+  font-family: "hand-written";
+  src: local("hand-written"),
+    url("./fonts/paulmaul-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.full-height-window {
+  height: 100vh;
+}
+
+a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--mainWhite);
+}
+
+h2,
+p {
+  padding-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 67.5rem;
+  padding: 2.5rem 1.25rem;
+  margin: 0 auto;
+}
+
+.pad-bottom-sm {
+  padding-bottom: 1em;
+}
+
+.pad-bottom-md {
+  padding-bottom: 1.5em;
+}
+
+.pad-bottom-lg {
+  padding-bottom: 2em;
+}
+
+.right {
+  float: right;
+}
+
+/* Nav */
+nav {
+  height: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  /* background-color: transparent; */
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+nav .container {
+  height: 5.625em;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+
+nav #logo {
+  display: block;
+  padding: 0;
+  width: 50%;
+  position: absolute;
+}
+
+nav .container > ul {
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+
+nav .container > ul > li {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 2em;
+  padding-left: 2em;
+  height: 100%;
+}
+
+nav ul a.active {
+  border-bottom: 2px solid var(--primaryColor);
+}
+
+/* Sections */
+header {
+  background: url(./images/header-background.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--mainWhite);
+  text-shadow: var(--smallDarkShadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container {
+  width: 70%;
+}
+
+header h1 {
+  color: var(--primaryColor);
+  font-family: "hand-written";
+  font-size: 3.3em;
+  font-weight: 100;
+}
+
+header .btn {
+  padding: 1em 2em;
+}
+
+.section {
+  padding: 5px;
+}
+
+.section.socials {
+  background: var(--primaryColor);
+}
+
+.section.one {
+  background: var(--offWhite);
+  position: relative;
+}
+
+.section.one h2,
+.section.one p,
+.section.two h2 {
+  font-family: "hand-written";
+}
+
+.section.one h2 {
+  color: var(--primaryColor);
+  font-family: "hand-written";
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.section.one .container {
+  padding-left: calc(50% - 6.25rem);
+}
+
+.section.one:before,
+.section.one:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section.one:after {
+  width: calc(50% - 8.75rem);
+  z-index: 1;
+  background: url(./images/victoria.jpg) right center no-repeat;
+  background-size: cover;
+}
+
+.section.two {
+  color: var(--mainWhite);
+  background: var(--mainGrey);
+}
+
+.section.three {
+  color: var(--mainWhite);
+  background: var(--secondaryColor);
+}
+
+footer {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer p {
+  font-size: 0.7em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+footer .social-links a {
+  font-size: 2em;
   color: white;
+  padding: 0 0.2em;
 }
 
-.App-link {
-  color: #61dafb;
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.4rem 1.5rem;
+  border: 3px solid var(--primaryColor);
+  border-radius: 8px;
+  transition: var(--mainTransition);
+  cursor: pointer;
+  text-shadow: none;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+
+.section.socials {
+  padding-top: 0.3em;
+  text-align: right;
+  position: absolute;
+  align-self: flex-end;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.section.socials span {
+  color: var(--mainWhite);
+  font-size: 2em;
+  padding-right: 0.7em;
+}
+
+.section.socials .mcarthys-logo {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
 }
