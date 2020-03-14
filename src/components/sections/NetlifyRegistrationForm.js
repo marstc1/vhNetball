@@ -28,20 +28,26 @@ const NetlifyRegistrationForm = () => {
         secondaryEmail: "",
         isCompetitive: ""
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        // // Todo: Link up to emailer
-        // setTimeout(() => {
-        //   console.log("Sending form data ...", values);
-        // }, 500);
-        console.log(values);
-
+      onSubmit={(
+        values,
+        { setSubmitting, setErrors, setStatus, resetForm }
+      ) => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "register", ...values })
+          body: encode({ "form-name": "Registration", ...values })
         })
-          .then(() => alert("Success!"))
-          .catch(error => console.log(error));
+          .then(() => {
+            resetForm({});
+            setStatus({ success: true });
+            console.log("Success");
+          })
+          .catch(error => {
+            console.log(error);
+            setStatus({ success: false });
+            setSubmitting(false);
+            setErrors({ submit: error.message });
+          });
       }}
       validationSchema={Yup.object().shape({
         teamName: Yup.string().required("Please enter a team name"),
@@ -63,6 +69,7 @@ const NetlifyRegistrationForm = () => {
         const {
           values,
           touched,
+          status,
           errors,
           isSubmitting,
           handleChange,
@@ -70,6 +77,10 @@ const NetlifyRegistrationForm = () => {
           handleSubmit,
           setFieldValue
         } = props;
+
+        if (!!status && !!status.success) {
+          return <div>Success</div>;
+        }
 
         return (
           <div id='section3' className='section three'>
@@ -233,10 +244,6 @@ const NetlifyRegistrationForm = () => {
                   {errors.isCompetitive && touched.isCompetitive && (
                     <div className='input-feedback'>{errors.isCompetitive}</div>
                   )}
-                </div>
-
-                <div class='field'>
-                  <div data-netlify-recaptcha='true'></div>
                 </div>
 
                 <button type='submit' disabled={isSubmitting}>
