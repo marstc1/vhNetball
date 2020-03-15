@@ -9,7 +9,7 @@ export default class Header extends Component {
         <div className='container'>
           <div>
             <h1>Saturday 27th June 2020</h1>
-            <h2 className='pad-bottom-md'>City Academy</h2>
+            <h2 className='pad-bottom-sm'>City Academy</h2>
             <p className='pad-bottom-lg'>
               Please join us for the 6th year for our charity netball festival
               in honour of Victoria Hawkins (Davy) who passed away on the 31st

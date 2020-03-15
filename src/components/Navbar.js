@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import logo from "../images/logo.png";
+import logo from "../images/butterfly-logo.png";
 
 export default function Navbar() {
   const isTransparent = useState("isTransparent");
@@ -18,13 +18,11 @@ export default function Navbar() {
           smooth={true}
           offset={0}
           duration={500}>
-          <img
-            src={logo}
-            alt='The Victoria Hawkins Memorial Netball Tournament'
-          />
+          <img src={logo} alt='Butterfly' />
+          <span>The Victoria Hawkins Netball Tournament</span>
         </Link>
 
-        <ul>
+        <ul className='menu'>
           <li>
             <Link
               activeClass='active'

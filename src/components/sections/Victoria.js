@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import victoria from "../../images/victoria-profile.jpg";
 
 export default class Victoria extends Component {
   render() {
     return (
       <div id='section1' className='section one'>
         <div className='container'>
-          <h2>A little bit about Victoria ...</h2>
+          <h2>Victoria</h2>
+          <img src={victoria} alt='Victoria' className='victoria' />
+          <p>A little bit about Victoria ...</p>
           <p>
             The aim of this now annual netball event is to celebrate the memory
             of Victoria Hawkins, a fantastic netballer who was well known in the

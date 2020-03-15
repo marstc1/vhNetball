@@ -33,8 +33,39 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "OpenSansRegular";
+  src: local("OpenSansRegular"),
+    url("./fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: local("OpenSansLight"),
+    url("./fonts/opensans_light_macroman/OpenSans-Light-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: local("OpenSansBold"),
+    url("./fonts/opensans_bold_macroman/OpenSans-Bold-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sr-only {
+  display: none;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: OpenSansLight, Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
 
@@ -52,7 +83,6 @@ a:hover {
   color: var(--mainWhite);
 }
 
-h2,
 p {
   padding-bottom: 1em;
 }
@@ -61,17 +91,38 @@ ul {
   list-style: none;
 }
 
+ol {
+  padding-left: 3em;
+}
+
+fieldset {
+  border: 0;
+}
+
 .container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 67.5rem;
-  padding: 2.5rem 1.25rem;
+  padding: 0 1.25rem;
   margin: 0 auto;
+}
+
+nav .container {
+  padding: 5px;
+}
+
+header .container {
+  width: 90%;
+  font-size: 0.8em;
 }
 
 footer .container {
   padding: 1em 0 0.5em;
+}
+
+.pad-bottom-xsm {
+  padding-bottom: 0.5em;
 }
 
 .pad-bottom-sm {
@@ -92,42 +143,39 @@ footer .container {
 
 /* Nav */
 nav {
-  height: 90px;
+  display: flex;
   position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
   width: 100%;
-  /* background-color: transparent; */
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-nav .container {
-  height: 5.625em;
-  padding-top: 0;
-  padding-bottom: 0;
-  position: relative;
+  background-color: black;
+  z-index: 100;
 }
 
 nav #logo {
-  display: block;
-  padding: 0;
-  width: 50%;
-  position: absolute;
+  display: flex;
+  align-items: center;
 }
 
-nav .container > ul {
-  text-align: right;
-  height: 100%;
-  width: 100%;
+nav #logo img {
+  width: 50px;
+  margin: 0 20px;
 }
 
-nav .container > ul > li {
-  display: inline-block;
-  vertical-align: middle;
-  padding-top: 2em;
-  padding-left: 2em;
-  height: 100%;
+nav #logo span {
+  max-width: 240px;
+  font-family: "hand-written";
+  font-size: 1.7em;
+  line-height: 1em;
+  color: white;
+}
+
+nav ul.menu {
+  display: flex;
+  justify-content: space-around;
+  font-family: OpenSansBold;
+  font-size: 0.8em;
+  margin-top: 5px;
+  padding: 5px 0 2px;
+  border-top: 1px solid #222;
 }
 
 nav ul a.active {
@@ -135,31 +183,36 @@ nav ul a.active {
   color: white;
 }
 
+h2 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
 /* Sections */
 header {
   background: url(./images/header-background.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: OpenSansBold;
   color: var(--mainWhite);
   text-shadow: var(--smallDarkShadow);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 25px;
 }
 
-header .container {
-  width: 70%;
+header h1,
+header h2 {
+  text-align: left;
 }
 
 header h1 {
   color: var(--primaryColor);
-  font-family: "hand-written";
-  font-size: 3.3em;
-  font-weight: 100;
-}
-
-header .btn {
-  padding: 1em 2em;
+  font-family: OpenSansBold;
+  font-size: 2.5em;
+  line-height: 1em;
+  margin-bottom: 10px;
 }
 
 .section {
@@ -175,39 +228,20 @@ header .btn {
   position: relative;
 }
 
-.section.one h2,
-.section.one p,
-.section.two h2 {
-  font-family: "hand-written";
-}
-
 .section.one h2 {
   color: var(--primaryColor);
   font-family: "hand-written";
   font-size: 3em;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
-.section.one .container {
-  padding-left: calc(50% - 6.25rem);
-}
-
-.section.one:before,
-.section.one:after {
-  content: "";
+.section.one .victoria {
+  width: 250px;
+  border-radius: 50%;
   display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.section.one:after {
-  width: calc(50% - 8.75rem);
-  z-index: 1;
-  background: url(./images/victoria.jpg) right center no-repeat;
-  background-size: cover;
+  margin: auto;
+  margin-bottom: 15px;
 }
 
 .section.two {
@@ -218,11 +252,11 @@ header .btn {
 .section.three {
   color: var(--mainWhite);
   background: var(--secondaryColor);
-  padding-bottom: 2em;
 }
 
-.section.three h2 {
-  text-align: center;
+.section.three a,
+footer a {
+  font-weight: bold;
 }
 
 footer {
@@ -245,7 +279,7 @@ footer .social-links a {
 .btn {
   display: inline-block;
   text-decoration: none;
-  padding: 0.4rem 1.5rem;
+  padding: 1em 2em;
   border: 3px solid var(--primaryColor);
   border-radius: 8px;
   transition: var(--mainTransition);
@@ -256,7 +290,7 @@ footer .social-links a {
 
 .btn-primary {
   background-color: var(--primaryColor);
-  color: var(--secondaryColor);
+  color: var(--mainWhite);
 }
 
 .section.socials {
@@ -276,12 +310,13 @@ footer .social-links a {
 
 .section.socials .mcarthys-logo {
   position: absolute;
-  left: 50px;
+  left: 10px;
   bottom: 0;
+  width: 120px;
 }
 
 form {
-  padding: 1em 4em;
+  padding: 1em 2em;
   background-color: rgb(84, 63, 101);
 }
 
@@ -314,24 +349,6 @@ input.error {
   margin: 0 0 2em;
 }
 
-button {
-  padding: 0.7em 3em;
-  background-color: var(--primaryColor);
-  color: white;
-  border: 1px solid var(--primaryColor);
-  background-color: 250ms;
-  float: right;
-  font-size: 1.2em;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: white;
-  color: var(--primaryColor);
-}
-
 button:disabled {
   cursor: wait;
   background-color: #666;
@@ -339,12 +356,18 @@ button:disabled {
   border-color: #777;
 }
 
+.already-registered {
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+
 .segmentedControl {
   width: 100%;
   margin-bottom: 2em;
 }
 
-.segmentedControl p {
+.segmentedControl legend {
   padding-bottom: 0.5em;
 }
 
@@ -362,13 +385,14 @@ button:disabled {
 .segmentedControl span {
   display: block;
   text-align: center;
-  background-color: #999;
-  color: #777;
+  background-color: var(--mainWhite);
+  color: var(--primaryColor);
   cursor: pointer;
   height: 40px;
   line-height: 40px;
   border: 1px solid #666;
   border-radius: 3px;
+  font-weight: bold;
 }
 .segmentedControl span:first-of-type {
   border-top-right-radius: 0;
@@ -387,4 +411,74 @@ button:disabled {
 
 .segmentedControl .input-feedback {
   margin-top: 20px;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 480px) {
+  form {
+    padding: 1em 4em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin: 0.5em 0 1.5em;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav #logo img {
+    width: 90px;
+  }
+
+  nav #logo span {
+    font-size: 2.2em;
+    line-height: 0.8em;
+  }
+
+  nav ul.menu {
+    margin-top: 0;
+    padding: 0 1em;
+    border-top: none;
+  }
+
+  nav ul.menu li {
+    display: inline-block;
+    padding-top: 2.6em;
+    padding-left: 2em;
+  }
+
+  .section.one .container {
+    padding-left: calc(50% - 6.25rem);
+  }
+
+  .section.one .victoria {
+    display: none;
+  }
+
+  .section.one:before,
+  .section.one:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .section.one:after {
+    width: calc(50% - 8.75rem);
+    z-index: 1;
+    background: url(./images/victoria.jpg) right center no-repeat;
+    background-size: cover;
+  }
 }

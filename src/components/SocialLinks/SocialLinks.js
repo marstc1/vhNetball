@@ -31,6 +31,7 @@ const SocialLinks = () => {
             target='_blank'
             rel='noopener noreferrer'>
             <span>{item.icon}</span>
+            <span className='sr-only'>{item.name}</span>
           </a>
         );
       })}

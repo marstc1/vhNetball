@@ -86,186 +86,218 @@ const NetlifyRegistrationForm = () => {
         if (!!status && !!status.success) {
           return (
             <div>
-              <h3>Fantastic!</h3>
-              <p>You are all registered for the event.</p>
-              <p>
-                Please submit your entry fee of £30 using our
-                <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-                  {" Just Giving "}
-                </a>
-                page
+              <h3 className='pad-bottom-lg'>
+                Fantastic! - You have been registered
+              </h3>
+              <p>Just a couple of things to do before the big day ...</p>
+              <ol className='pad-bottom-lg'>
+                <li className='pad-bottom-sm'>
+                  Please submit your entry fee of <strong>£30</strong> using our
+                  <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
+                    {" Just Giving "}
+                  </a>
+                  page.
+                </li>
+                <li>
+                  A deposit of <strong>£50</strong> can be sent by cheque to
+                  sent to; <br />
+                  <strong>
+                    Lisa Price, 7 Charolais Close, Trowse, Norwich, NR14 8GD
+                  </strong>
+                  <br />
+                  (this cheque will be returned to you at the event).
+                </li>
+              </ol>
+              <p className='pad-bottom-lg'>
+                Thank you – we look forward to seeing you at this event!
               </p>
-              <p>
-                A deposit of £50 can be sent by cheque to the following address,
-                this will be returned to you at the event.
-              </p>
-              <p>Lisa Price, 7 Charolais Close, Trowse, Norwich, NR14 8GD</p>
             </div>
           );
         }
 
         return (
-          <form autoComplete='off' onSubmit={handleSubmit}>
-            <label htmlFor='teamName'>Team Name</label>
-            <input
-              type='text'
-              value={values.teamName}
-              name='teamName'
-              placeholder='Enter your team name'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={errors.teamName && touched.teamName && "error"}
-            />
-            {errors.teamName && touched.teamName && (
-              <div className='input-feedback'>{errors.teamName}</div>
-            )}
+          <>
+            <form autoComplete='off' onSubmit={handleSubmit}>
+              <label htmlFor='teamName'>Team Name</label>
+              <input
+                type='text'
+                value={values.teamName}
+                id='teamName'
+                name='teamName'
+                placeholder='Enter your team name'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.teamName && touched.teamName && "error"}
+              />
+              {errors.teamName && touched.teamName && (
+                <div className='input-feedback'>{errors.teamName}</div>
+              )}
 
-            <label htmlFor='contactName'>Contact Name</label>
-            <input
-              type='text'
-              value={values.contactName}
-              name='contactName'
-              placeholder='Enter your contact name'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={errors.contactName && touched.contactName && "error"}
-            />
-            {errors.contactName && touched.contactName && (
-              <div className='input-feedback'>{errors.contactName}</div>
-            )}
+              <label htmlFor='contactName'>Contact Name</label>
+              <input
+                type='text'
+                value={values.contactName}
+                id='contactName'
+                name='contactName'
+                placeholder='Enter your contact name'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.contactName && touched.contactName && "error"}
+              />
+              {errors.contactName && touched.contactName && (
+                <div className='input-feedback'>{errors.contactName}</div>
+              )}
 
-            <label htmlFor='contactNumber'>Contact Number</label>
-            <input
-              type='text'
-              value={values.contactNumber}
-              name='contactNumber'
-              placeholder='Enter your contact number'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={
-                errors.contactNumber && touched.contactNumber && "error"
-              }
-            />
-            {errors.contactNumber && touched.contactNumber && (
-              <div className='input-feedback'>{errors.contactNumber}</div>
-            )}
+              <label htmlFor='contactNumber'>Contact Number</label>
+              <input
+                type='text'
+                value={values.contactNumber}
+                id='contactNumber'
+                name='contactNumber'
+                placeholder='Enter your contact number'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.contactNumber && touched.contactNumber && "error"
+                }
+              />
+              {errors.contactNumber && touched.contactNumber && (
+                <div className='input-feedback'>{errors.contactNumber}</div>
+              )}
 
-            <label htmlFor='email'>Email Address</label>
-            <input
-              type='text'
-              value={values.email}
-              name='email'
-              placeholder='Enter your email address'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={errors.email && touched.email && "error"}
-            />
-            {errors.email && touched.email && (
-              <div className='input-feedback'>{errors.email}</div>
-            )}
+              <label htmlFor='email'>Email Address</label>
+              <input
+                type='text'
+                value={values.email}
+                id='email'
+                name='email'
+                placeholder='Enter your email address'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.email && touched.email && "error"}
+              />
+              {errors.email && touched.email && (
+                <div className='input-feedback'>{errors.email}</div>
+              )}
 
-            <label htmlFor='secondaryContactName'>Contact Name</label>
-            <input
-              type='text'
-              value={values.secondaryContactName}
-              name='secondaryContactName'
-              placeholder='Enter a contact name'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={
-                errors.secondaryContactName &&
-                touched.secondaryContactName &&
-                "error"
-              }
-            />
-            {errors.secondaryContactName && touched.secondaryContactName && (
-              <div className='input-feedback'>
-                {errors.secondaryContactName}
-              </div>
-            )}
-
-            <label htmlFor='secondaryContactNumber'>Contact Number</label>
-            <input
-              type='text'
-              value={values.secondaryContactNumber}
-              name='secondaryContactNumber'
-              placeholder='Enter a contact number'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={
-                errors.secondaryContactNumber &&
-                touched.secondaryContactNumber &&
-                "error"
-              }
-            />
-            {errors.secondaryContactNumber &&
-              touched.secondaryContactNumber && (
+              <label htmlFor='secondaryContactName'>Contact Name</label>
+              <input
+                type='text'
+                value={values.secondaryContactName}
+                id='secondaryContactName'
+                name='secondaryContactName'
+                placeholder='Enter a contact name'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.secondaryContactName &&
+                  touched.secondaryContactName &&
+                  "error"
+                }
+              />
+              {errors.secondaryContactName && touched.secondaryContactName && (
                 <div className='input-feedback'>
-                  {errors.secondaryContactNumber}
+                  {errors.secondaryContactName}
                 </div>
               )}
 
-            <label htmlFor='secondaryEmail'>Email Address</label>
-            <input
-              type='text'
-              value={values.secondaryEmail}
-              name='secondaryEmail'
-              placeholder='Enter an email address'
-              onChange={handleChange}
-              onBlur={handleBlur}
-              className={
-                errors.secondaryEmail && touched.secondaryEmail && "error"
-              }
-            />
-            {errors.secondaryEmail && touched.secondaryEmail && (
-              <div className='input-feedback'>{errors.secondaryEmail}</div>
-            )}
+              <label htmlFor='secondaryContactNumber'>Contact Number</label>
+              <input
+                type='text'
+                value={values.secondaryContactNumber}
+                id='secondaryContactNumber'
+                name='secondaryContactNumber'
+                placeholder='Enter a contact number'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.secondaryContactNumber &&
+                  touched.secondaryContactNumber &&
+                  "error"
+                }
+              />
+              {errors.secondaryContactNumber &&
+                touched.secondaryContactNumber && (
+                  <div className='input-feedback'>
+                    {errors.secondaryContactNumber}
+                  </div>
+                )}
 
-            <div className='segmentedControl'>
-              <p>How would you like to play?</p>
-              <label htmlFor='isCompetitiveY'>
-                <input
-                  type='radio'
-                  value='Competitive - I am playing to win!'
-                  name='isCompetitive'
-                  id='isCompetitiveY'
-                  checked={
-                    values.isCompetitive ===
-                    "Competitive - I am playing to win!"
-                  }
-                  onChange={() =>
-                    setFieldValue(
-                      "isCompetitive",
-                      "Competitive - I am playing to win!"
-                    )
-                  }
-                />
-                <span>Competitive</span>
-              </label>
-
-              <label htmlFor='isCompetitiveN'>
-                <input
-                  type='radio'
-                  value='Just for fun!'
-                  name='isCompetitive'
-                  id='isCompetitiveN'
-                  checked={values.isCompetitive === "Just for fun!"}
-                  onChange={() =>
-                    setFieldValue("isCompetitive", "Just for fun!")
-                  }
-                />
-                <span>Fun</span>
-              </label>
-
-              {errors.isCompetitive && touched.isCompetitive && (
-                <div className='input-feedback'>{errors.isCompetitive}</div>
+              <label htmlFor='SecondaryEmail'>Email Address</label>
+              <input
+                type='text'
+                value={values.secondaryEmail}
+                name='secondaryEmail'
+                id='SecondaryEmail'
+                placeholder='Enter an email address'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={
+                  errors.secondaryEmail && touched.secondaryEmail && "error"
+                }
+              />
+              {errors.secondaryEmail && touched.secondaryEmail && (
+                <div className='input-feedback'>{errors.secondaryEmail}</div>
               )}
-            </div>
 
-            <button type='submit' disabled={isSubmitting}>
-              Send
-            </button>
-          </form>
+              <div className='segmentedControl'>
+                <fieldset>
+                  <legend>How would you like to play?</legend>
+                  <label htmlFor='isCompetitiveY'>
+                    <input
+                      type='radio'
+                      value='Competitive - I am playing to win!'
+                      id='isCompetitiveY'
+                      name='isCompetitive'
+                      checked={
+                        values.isCompetitive ===
+                        "Competitive - I am playing to win!"
+                      }
+                      onChange={() =>
+                        setFieldValue(
+                          "isCompetitive",
+                          "Competitive - I am playing to win!"
+                        )
+                      }
+                    />
+                    <span>Competitively</span>
+                  </label>
+
+                  <label htmlFor='isCompetitiveN'>
+                    <input
+                      type='radio'
+                      value='Just for fun!'
+                      id='isCompetitiveN'
+                      name='isCompetitive'
+                      checked={values.isCompetitive === "Just for fun!"}
+                      onChange={() =>
+                        setFieldValue("isCompetitive", "Just for fun!")
+                      }
+                    />
+                    <span>Just for fun!</span>
+                  </label>
+
+                  {errors.isCompetitive && touched.isCompetitive && (
+                    <div className='input-feedback'>{errors.isCompetitive}</div>
+                  )}
+                </fieldset>
+              </div>
+
+              <button
+                className='btn btn-primary right'
+                type='submit'
+                disabled={isSubmitting}>
+                Send
+              </button>
+            </form>
+            <p className='already-registered'>
+              Already registered? Visit our{" "}
+              <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
+                {" Just Giving "}
+              </a>{" "}
+              page to submit your entry fee.
+            </p>
+          </>
         );
       }}
     </Formik>
