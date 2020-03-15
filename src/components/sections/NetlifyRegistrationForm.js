@@ -117,7 +117,13 @@ const NetlifyRegistrationForm = () => {
 
         return (
           <>
-            <form autoComplete='off' onSubmit={handleSubmit}>
+            <form
+              name='Registration'
+              autoComplete='off'
+              onSubmit={handleSubmit}
+              method='post'
+              data-netlify='true'
+              dat-netlify-honeypot='bot-field'>
               <label htmlFor='teamName'>Team Name</label>
               <input
                 type='text'
@@ -281,6 +287,10 @@ const NetlifyRegistrationForm = () => {
                     <div className='input-feedback'>{errors.isCompetitive}</div>
                   )}
                 </fieldset>
+
+                <div class='field'>
+                  <div data-netlify-recaptcha='true'></div>
+                </div>
               </div>
 
               <button
