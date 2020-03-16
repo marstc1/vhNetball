@@ -145,80 +145,12 @@ footer .container {
   float: right;
 }
 
-/* Nav */
-nav {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  background-color: black;
-  z-index: 100;
-}
-
-nav #logo {
-  display: flex;
-  align-items: center;
-}
-
-nav #logo img {
-  width: 50px;
-  margin: 0 20px;
-}
-
-nav #logo span {
-  max-width: 240px;
-  font-family: "hand-written";
-  font-size: 1.7em;
-  line-height: 1em;
-  color: white;
-}
-
-nav ul.menu {
-  display: flex;
-  justify-content: space-around;
-  font-family: OpenSansBold;
-  font-size: 0.8em;
-  margin-top: 5px;
-  padding: 5px 0 2px;
-  border-top: 1px solid #222;
-}
-
-nav ul a.active {
-  border-bottom: 2px solid var(--limaGreen);
-  color: white;
-}
-
 h2 {
   text-align: center;
   margin: 0.5em 0;
 }
 
 /* Sections */
-header {
-  background: url(./images/header-background.jpg) center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: OpenSansBold;
-  color: var(--mainWhite);
-  text-shadow: var(--smallDarkShadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25px;
-}
-
-header h1,
-header h2 {
-  text-align: left;
-}
-
-header h1 {
-  color: var(--limaGreen);
-  font-family: OpenSansBold;
-  font-size: 2.5em;
-  line-height: 1em;
-  margin-bottom: 10px;
-}
-
 .section {
   padding: 5px;
 }
@@ -269,22 +201,6 @@ footer a {
   font-weight: bold;
 }
 
-footer {
-  background: var(--mainBlack);
-  color: var(--mainWhite);
-  text-align: center;
-}
-
-footer p {
-  font-size: 0.7em;
-}
-
-footer .social-links a {
-  font-size: 2em;
-  color: white;
-  padding: 0 0.2em;
-}
-
 /* Buttons */
 .btn {
   display: inline-block;
@@ -303,63 +219,11 @@ footer .social-links a {
   color: var(--mainWhite);
 }
 
-.section.socials {
-  padding-top: 0.3em;
-  text-align: right;
-  position: absolute;
-  align-self: flex-end;
-  width: 100%;
-  padding-top: 10px;
-}
-
-.section.socials span {
-  color: var(--mainWhite);
-  font-size: 2em;
-  padding-right: 0.7em;
-}
-
-.section.socials .mcarthys-logo {
-  position: absolute;
-  left: 10px;
-  bottom: 0;
-  width: 120px;
-}
-
 /* Media Queries */
 
 @media only screen and (min-width: 768px) {
   h2 {
     margin: 0.5em 0 1.5em;
-  }
-
-  nav {
-    display: block;
-  }
-
-  nav .container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  nav #logo img {
-    width: 90px;
-  }
-
-  nav #logo span {
-    font-size: 2.2em;
-    line-height: 0.8em;
-  }
-
-  nav ul.menu {
-    margin-top: 0;
-    padding: 0 1em;
-    border-top: none;
-  }
-
-  nav ul.menu li {
-    display: inline-block;
-    padding-top: 2.6em;
-    padding-left: 2em;
   }
 
   .section.one .container {

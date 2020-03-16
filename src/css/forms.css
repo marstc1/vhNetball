@@ -1,3 +1,12 @@
+form p {
+  font-weight: bold;
+}
+
+form p,
+form legend {
+  padding-top: 1em;
+}
+
 label,
 input {
   display: block;
@@ -14,17 +23,6 @@ input {
   padding: 10px;
   border-radius: 3px;
   border: 1px solid #777;
-}
-
-input.error {
-  border: 2px solid var(--limaGreen);
-}
-
-.input-feedback {
-  color: var(--limaGreen);
-  margin-top: -15px;
-  font-size: 14px;
-  margin: 0 0 2em;
 }
 
 button:disabled {
@@ -78,15 +76,6 @@ form .btn:hover {
   border-radius: 3px;
   font-weight: bold;
 }
-.segmentedControl span:first-of-type {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.segmentedControl span:last-of-type {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
 
 .segmentedControl label input:checked + span {
   background-color: var(--limaGreen);
@@ -95,6 +84,18 @@ form .btn:hover {
 
 .segmentedControl .input-feedback {
   margin-top: 20px;
+}
+
+.input-feedback {
+  color: var(--mainWhite);
+  margin-top: -15px;
+  font-size: 14px;
+  margin: 0 0 2em;
+}
+
+span.error,
+input.error {
+  border: 2px solid #b90b0b;
 }
 
 @media only screen and (min-width: 480px) {

@@ -17,13 +17,13 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     );
 
   const initialValues = {
-    teamName: "Test",
-    contactName: "Testing",
-    contactNumber: "01603 654654",
-    email: "test@email.com",
-    secondaryContactName: "Tester",
-    secondaryContactNumber: "01603 321321",
-    secondaryEmail: "testing@email.com",
+    teamName: "",
+    contactName: "",
+    contactNumber: "",
+    email: "",
+    secondaryContactName: "",
+    secondaryContactNumber: "",
+    secondaryEmail: "",
     isCompetitive: ""
   };
 
@@ -137,6 +137,8 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                 <div className='input-feedback'>{errors.teamName}</div>
               )}
 
+              <p>Primary Contact</p>
+
               <label htmlFor='contactName'>Contact Name</label>
               <input
                 type='text'
@@ -183,6 +185,8 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               {errors.email && touched.email && (
                 <div className='input-feedback'>{errors.email}</div>
               )}
+
+              <p>Secondary Contact</p>
 
               <label htmlFor='secondaryContactName'>Contact Name</label>
               <input
@@ -264,7 +268,9 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                         )
                       }
                     />
-                    <span>Competitively</span>
+                    <span className={errors.isCompetitive && "error"}>
+                      Competitively
+                    </span>
                   </label>
 
                   <label htmlFor='isCompetitiveN'>
@@ -278,7 +284,9 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                         setFieldValue("isCompetitive", "Just for fun!")
                       }
                     />
-                    <span>Just for fun!</span>
+                    <span className={errors.isCompetitive && "error"}>
+                      Just for fun!
+                    </span>
                   </label>
 
                   {errors.isCompetitive && touched.isCompetitive && (

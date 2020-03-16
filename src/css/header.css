@@ -1,0 +1,25 @@
+header {
+  background: url(../images/header-background.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: OpenSansBold;
+  color: var(--mainWhite);
+  text-shadow: var(--smallDarkShadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+header h1,
+header h2 {
+  text-align: left;
+}
+
+header h1 {
+  color: var(--limaGreen);
+  font-family: OpenSansBold;
+  font-size: 2.5em;
+  line-height: 1em;
+  margin-bottom: 10px;
+}

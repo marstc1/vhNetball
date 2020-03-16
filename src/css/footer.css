@@ -1,0 +1,15 @@
+footer {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.7em;
+}
+
+footer .social-links a {
+  font-size: 2em;
+  color: white;
+  padding: 0 0.2em;
+}
