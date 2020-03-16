@@ -1,0 +1,104 @@
+label,
+input {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  height: 22px;
+}
+
+input {
+  margin-bottom: 1em;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #777;
+}
+
+input.error {
+  border: 2px solid var(--limaGreen);
+}
+
+.input-feedback {
+  color: var(--limaGreen);
+  margin-top: -15px;
+  font-size: 14px;
+  margin: 0 0 2em;
+}
+
+button:disabled {
+  cursor: wait;
+  background-color: #666;
+  color: #777;
+  border-color: #777;
+}
+
+form .btn:hover {
+  background-color: var(--mainWhite);
+  color: var(--limaGreen);
+  border-color: var(--limaGreen);
+}
+
+.already-registered {
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 1em 0;
+}
+
+.segmentedControl {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.segmentedControl legend {
+  padding-bottom: 0.5em;
+}
+
+.segmentedControl label {
+  display: inline-block;
+  width: 50%;
+}
+
+.segmentedControl label input {
+  top: -20px;
+  position: fixed;
+  visibility: hidden;
+}
+
+.segmentedControl span {
+  display: block;
+  text-align: center;
+  background-color: var(--mainWhite);
+  color: var(--limaGreen);
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.segmentedControl span:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.segmentedControl span:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.segmentedControl label input:checked + span {
+  background-color: var(--limaGreen);
+  color: white;
+}
+
+.segmentedControl .input-feedback {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+  form {
+    padding: 1em 4em;
+  }
+}

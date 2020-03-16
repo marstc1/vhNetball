@@ -4,11 +4,14 @@
   padding: 0;
 }
 
+/* Colour names created using https://www.color-blindness.com/color-name-hue/ */
+
 :root {
-  /* --primaryColor: #8bd71d; */
-  --primaryColor: #7ebf20;
-  --secondaryColor: #2c2135;
-  --secondaryColorRgb: 44, 33, 53;
+  /* --limaGreen: #8bd71d; */
+  --limaGreen: #7ebf20;
+  --tolopeaPurple: #2c2135;
+  --tolopeaPurpleRgb: 44, 33, 53;
+  --honeyFlowerPurple: #543f65;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainGrey: #333;
@@ -71,10 +74,11 @@ body {
 
 .full-height-window {
   height: 100vh;
+  min-height: 450px;
 }
 
 a {
-  color: var(--primaryColor);
+  color: var(--limaGreen);
   text-decoration: none;
   cursor: pointer;
 }
@@ -179,7 +183,7 @@ nav ul.menu {
 }
 
 nav ul a.active {
-  border-bottom: 2px solid var(--primaryColor);
+  border-bottom: 2px solid var(--limaGreen);
   color: white;
 }
 
@@ -208,7 +212,7 @@ header h2 {
 }
 
 header h1 {
-  color: var(--primaryColor);
+  color: var(--limaGreen);
   font-family: OpenSansBold;
   font-size: 2.5em;
   line-height: 1em;
@@ -220,7 +224,7 @@ header h1 {
 }
 
 .section.socials {
-  background: var(--primaryColor);
+  background: var(--limaGreen);
 }
 
 .section.one {
@@ -229,7 +233,7 @@ header h1 {
 }
 
 .section.one h2 {
-  color: var(--primaryColor);
+  color: var(--limaGreen);
   font-family: "hand-written";
   font-size: 3em;
   font-weight: 300;
@@ -251,7 +255,13 @@ header h1 {
 
 .section.three {
   color: var(--mainWhite);
-  background: var(--secondaryColor);
+  background: var(--tolopeaPurple);
+}
+
+.section.three .section-content {
+  background-color: var(--honeyFlowerPurple);
+  padding: 1em 2em;
+  margin-bottom: 2em;
 }
 
 .section.three a,
@@ -280,7 +290,7 @@ footer .social-links a {
   display: inline-block;
   text-decoration: none;
   padding: 1em 2em;
-  border: 3px solid var(--primaryColor);
+  border: 3px solid var(--limaGreen);
   border-radius: 8px;
   transition: var(--mainTransition);
   cursor: pointer;
@@ -289,7 +299,7 @@ footer .social-links a {
 }
 
 .btn-primary {
-  background-color: var(--primaryColor);
+  background-color: var(--limaGreen);
   color: var(--mainWhite);
 }
 
@@ -315,111 +325,7 @@ footer .social-links a {
   width: 120px;
 }
 
-form {
-  padding: 1em 2em;
-  background-color: rgb(84, 63, 101);
-}
-
-label,
-input {
-  display: block;
-  width: 100%;
-}
-
-label {
-  margin-bottom: 5px;
-  height: 22px;
-}
-
-input {
-  margin-bottom: 1em;
-  padding: 10px;
-  border-radius: 3px;
-  border: 1px solid #777;
-}
-
-input.error {
-  border: 2px solid var(--primaryColor);
-}
-
-.input-feedback {
-  color: var(--primaryColor);
-  margin-top: -15px;
-  font-size: 14px;
-  margin: 0 0 2em;
-}
-
-button:disabled {
-  cursor: wait;
-  background-color: #666;
-  color: #777;
-  border-color: #777;
-}
-
-.already-registered {
-  display: inline-block;
-  font-size: 0.8em;
-  margin: 1em 0;
-}
-
-.segmentedControl {
-  width: 100%;
-  margin-bottom: 2em;
-}
-
-.segmentedControl legend {
-  padding-bottom: 0.5em;
-}
-
-.segmentedControl label {
-  display: inline-block;
-  width: 50%;
-}
-
-.segmentedControl label input {
-  top: -20px;
-  position: fixed;
-  visibility: hidden;
-}
-
-.segmentedControl span {
-  display: block;
-  text-align: center;
-  background-color: var(--mainWhite);
-  color: var(--primaryColor);
-  cursor: pointer;
-  height: 40px;
-  line-height: 40px;
-  border: 1px solid #666;
-  border-radius: 3px;
-  font-weight: bold;
-}
-.segmentedControl span:first-of-type {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.segmentedControl span:last-of-type {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.segmentedControl label input:checked + span {
-  background-color: var(--primaryColor);
-  color: white;
-}
-
-.segmentedControl .input-feedback {
-  margin-top: 20px;
-}
-
 /* Media Queries */
-
-@media only screen and (min-width: 480px) {
-  form {
-    padding: 1em 4em;
-  }
-}
 
 @media only screen and (min-width: 768px) {
   h2 {

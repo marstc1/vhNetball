@@ -2,9 +2,8 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-const NetlifyRegistrationForm = () => {
+const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
   const encode = data => {
-    console.log(data);
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
@@ -40,6 +39,7 @@ const NetlifyRegistrationForm = () => {
       .then(() => {
         resetForm({});
         setStatus({ success: true });
+        formSubmitHandler("true");
         console.log("Success");
       })
       .catch(error => {
@@ -108,9 +108,7 @@ const NetlifyRegistrationForm = () => {
                   (this cheque will be returned to you at the event).
                 </li>
               </ol>
-              <p className='pad-bottom-lg'>
-                Thank you – we look forward to seeing you at this event!
-              </p>
+              <p>Thank you – we look forward to seeing you at this event!</p>
             </div>
           );
         }
@@ -300,13 +298,6 @@ const NetlifyRegistrationForm = () => {
                 Send
               </button>
             </form>
-            <p className='already-registered'>
-              Already registered? Visit our{" "}
-              <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-                {" Just Giving "}
-              </a>{" "}
-              page to submit your entry fee.
-            </p>
           </>
         );
       }}

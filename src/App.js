@@ -8,8 +8,11 @@ import Registration from "./components/sections/Registration";
 
 import "./fonts/paulmaul-regular.woff";
 import "./App.css";
+import "./css/forms.css";
+import "./css/modal.css";
 import Footer from "./components/sections/Footer";
 import { useScrollPosition } from "./hooks/useScrollPosition";
+import { Modal } from "./components/Modal/Modal";
 
 function App() {
   const [isTransparentValue, setTransparencyValueOnScroll] = useState(true);
@@ -26,6 +29,7 @@ function App() {
   return useMemo(
     () => (
       <div className='App'>
+        <Modal />
         <Navbar isTransparent={isTransparentValue} />
         <Header />
         <Victoria />
