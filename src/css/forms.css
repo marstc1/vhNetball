@@ -70,7 +70,7 @@ form .btn:hover {
   background-color: var(--mainWhite);
   color: var(--limaGreen);
   cursor: pointer;
-  height: 40px;
+  height: 42px;
   line-height: 40px;
   border: 1px solid #666;
   border-radius: 3px;
@@ -90,16 +90,38 @@ form .btn:hover {
   color: var(--mainWhite);
   margin-top: -15px;
   font-size: 14px;
-  margin: 0 0 2em;
+  margin: -0.5em 0 1em;
+  display: inline-block;
+  background-color: var(--crimsonRed);
+  padding: 1em;
+  border: 1px solid var(--crimsonRed);
+  box-shadow: var(--smallDarkShadow);
+  position: relative;
+}
+
+.input-feedback:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--crimsonRed);
+  position: absolute;
+  top: -10px;
 }
 
 span.error,
 input.error {
-  border: 2px solid #b90b0b;
+  border: 2px solid var(--crimsonRed);
+  background-color: #fbdee6;
 }
 
 @media only screen and (min-width: 480px) {
   form {
     padding: 1em 4em;
+  }
+
+  form .btn {
+    margin-top: 0.5em;
   }
 }
