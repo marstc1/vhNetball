@@ -11,8 +11,16 @@ export default class Header extends Component {
             <h2>Event Cancelled</h2>
             <p>
               For the past 5 consecutive years we have held an annual netball
-              tournament to honour our friend and team mate Victoria Hawkins who
-              passed away unexpectedly in 2014.
+              tournament to honour our friend and team mate{" "}
+              <Link
+                to='section1'
+                spy={true}
+                smooth={true}
+                offset={-90}
+                duration={500}>
+                Victoria Hawkins
+              </Link>{" "}
+              who passed away unexpectedly in 2014.
             </p>
 
             <p>
