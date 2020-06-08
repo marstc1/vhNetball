@@ -15,6 +15,7 @@
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainGrey: #333;
+  --lightGrey: #999;
   --mainBlack: #000;
   --crimsonRed: #c51244;
   --smallDarkShadow: 0px 2px 2px rgb(0, 0, 0, 0.8);
@@ -161,16 +162,13 @@ h2 {
 }
 
 .section.one {
-  background: var(--offWhite);
+  background: var(--lightGrey);
   position: relative;
+  color: var(--offWhite);
 }
 
 .section.one h2 {
-  color: var(--limaGreen);
-  font-family: "hand-written";
-  font-size: 3em;
-  font-weight: 300;
-  margin-bottom: 0;
+  font-size: 2em;
 }
 
 .section.one .victoria {

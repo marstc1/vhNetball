@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/sections/Header";
 import Victoria from "./components/sections/Victoria";
-import EventInfo from "./components/sections/EventInfo";
+import Event from "./components/sections/Event";
 import Registration from "./components/sections/Registration";
 import Footer from "./components/sections/Footer";
 
@@ -23,8 +23,8 @@ function App() {
     <div className='App'>
       <Navbar />
       <Header />
+      <Event />
       <Victoria />
-      <EventInfo />
       {registrationOpen && <Registration />}
       <Footer />
     </div>

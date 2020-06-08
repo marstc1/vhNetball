@@ -17,15 +17,15 @@ export default class Header extends Component {
 
             <p>
               Due to so much uncertainty around when it will be safe to organise
-              a large event, it is with a heavy heart, we have made the sensible
-              decision to postpone until 2021 when we will be back even stronger
-              than before.
+              a large event, it is with a heavy heart that we have made the
+              sensible decision to postpone until 2021, when we will be back
+              even stronger than before.
             </p>
 
             <p>
-              If you do still want to donate to Nelson's Journey a local charity
-              that supports bereaved children and young people in Norfolk then
-              you can still do this via our{" "}
+              If you would still like to donate to Nelson's Journey, a local
+              charity that supports bereaved children and young people in
+              Norfolk, then you can still do this via our{" "}
               <a
                 target='_blank'
                 rel='noopener noreferrer'
