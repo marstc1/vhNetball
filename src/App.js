@@ -1,6 +1,4 @@
-import React, { useState, useMemo } from "react";
-
-import { Modal } from "./components/Modal/Modal";
+import React from "react";
 
 import Navbar from "./components/Navbar";
 import Header from "./components/sections/Header";
@@ -16,36 +14,20 @@ import "./css/nav.css";
 import "./css/header.css";
 import "./css/socialsBar.css";
 import "./css/forms.css";
-import "./css/modal.css";
 import "./css/footer.css";
 
-import { useScrollPosition } from "./hooks/useScrollPosition";
+const registrationOpen = false;
 
 function App() {
-  const [isTransparentValue, setTransparencyValueOnScroll] = useState(true);
-
-  useScrollPosition(
-    ({ currPos }) => {
-      const isTransparent = currPos.y === 0;
-      if (isTransparent !== isTransparentValue)
-        setTransparencyValueOnScroll(isTransparent);
-    },
-    [isTransparentValue]
-  );
-
-  return useMemo(
-    () => (
-      <div className='App'>
-        <Modal />
-        <Navbar isTransparent={isTransparentValue} />
-        <Header />
-        <Victoria />
-        <EventInfo />
-        <Registration />
-        <Footer />
-      </div>
-    ),
-    [isTransparentValue]
+  return (
+    <div className='App'>
+      <Navbar />
+      <Header />
+      <Victoria />
+      <EventInfo />
+      {registrationOpen && <Registration />}
+      <Footer />
+    </div>
   );
 }
 

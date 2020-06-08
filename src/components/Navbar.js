@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import logo from "../images/butterfly-logo.png";
 
 export default function Navbar() {
-  const isTransparent = useState("isTransparent");
-  console.log(isTransparent);
   const offsetHeight = -90;
+  const displayNavLinks = false;
 
   return (
-    <nav className={isTransparent ? "navbar transparent" : "navbar"}>
+    <nav className='navbar transparent'>
       <div className='container'>
         <Link
           id='logo'
@@ -22,41 +21,43 @@ export default function Navbar() {
           <span>The Victoria Hawkins Netball Tournament</span>
         </Link>
 
-        <ul className='menu'>
-          <li>
-            <Link
-              activeClass='active'
-              to='section1'
-              spy={true}
-              smooth={true}
-              offset={offsetHeight}
-              duration={500}>
-              Victoria
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass='active'
-              to='section2'
-              spy={true}
-              smooth={true}
-              offset={offsetHeight}
-              duration={500}>
-              Event Information
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass='active'
-              to='section3'
-              spy={true}
-              smooth={true}
-              offset={offsetHeight}
-              duration={500}>
-              Register
-            </Link>
-          </li>
-        </ul>
+        {displayNavLinks && (
+          <ul className='menu'>
+            <li>
+              <Link
+                activeClass='active'
+                to='section1'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Victoria
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='section2'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Event Information
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='section3'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Register
+              </Link>
+            </li>
+          </ul>
+        )}
       </div>
     </nav>
   );

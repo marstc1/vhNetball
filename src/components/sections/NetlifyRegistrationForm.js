@@ -3,16 +3,18 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 
 const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
-  const encode = data => {
+  const encode = (data) => {
     return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
       .join("&");
   };
 
   const contactNumberValidation = Yup.string()
     .required("Please enter a contact number")
     .matches(
-      /(^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$)/,
+      /(^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?#(\d{4}|\d{3}))?$)/,
       "Please enter a valid UK telephone number"
     );
 
@@ -24,7 +26,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryContactName: "",
     secondaryContactNumber: "",
     secondaryEmail: "",
-    isCompetitive: ""
+    isCompetitive: "",
   };
 
   const handleSubmit = (
@@ -34,7 +36,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Registration", ...values })
+      body: encode({ "form-name": "Registration", ...values }),
     })
       .then(() => {
         resetForm({});
@@ -42,7 +44,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
         formSubmitHandler("true");
         console.log("Success");
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         setStatus({ success: false });
         setSubmitting(false);
@@ -54,15 +56,11 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     teamName: Yup.string().required("Please enter a team name"),
     contactName: Yup.string().required("Please enter a contact name"),
     contactNumber: contactNumberValidation,
-    email: Yup.string()
-      .email()
-      .required("Please enter an email"),
+    email: Yup.string().email().required("Please enter an email"),
     secondaryContactName: Yup.string().required("Please enter a contact name"),
     secondaryContactNumber: contactNumberValidation,
-    secondaryEmail: Yup.string()
-      .email()
-      .required("Please enter an email"),
-    isCompetitive: Yup.string().required("Please select an option")
+    secondaryEmail: Yup.string().email().required("Please enter an email"),
+    isCompetitive: Yup.string().required("Please select an option"),
   });
 
   return (
@@ -70,7 +68,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={validationSchema}>
-      {props => {
+      {(props) => {
         const {
           values,
           touched,
@@ -80,7 +78,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
           handleChange,
           handleBlur,
           handleSubmit,
-          setFieldValue
+          setFieldValue,
         } = props;
 
         if (!!status && !!status.success) {

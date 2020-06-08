@@ -23,3 +23,7 @@ header h1 {
   line-height: 1em;
   margin-bottom: 10px;
 }
+
+header .container {
+  max-width: 60em;
+}

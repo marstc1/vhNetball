@@ -7,7 +7,7 @@ export default class EventInfo extends Component {
         <div className='container'>
           <h2>Event Information</h2>
           <p>
-            Victoria’s festival will take place on Saturday 29th June 2019. The
+            Victoria’s festival will take place on Saturday 29th June 2020. The
             closing date for entries is the 16th June – unless places fill
             earlier.
           </p>

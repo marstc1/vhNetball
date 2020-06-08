@@ -2,7 +2,7 @@ nav {
   display: flex;
   position: fixed;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 100;
 }
 
@@ -41,7 +41,7 @@ nav ul a.active {
 
 /* Media Queries */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 500px) {
   nav {
     display: block;
   }
