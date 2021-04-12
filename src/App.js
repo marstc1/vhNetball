@@ -24,8 +24,8 @@ function App() {
       <Navbar />
       <Header />
       <Event />
-      <Victoria />
       {registrationOpen && <Registration />}
+      <Victoria />
       <Footer />
     </div>
   );

@@ -4,7 +4,7 @@ import logo from "../images/butterfly-logo.png";
 
 export default function Navbar() {
   const offsetHeight = -90;
-  const displayNavLinks = false;
+  const displayNavLinks = true;
 
   return (
     <nav className='navbar transparent'>
@@ -26,17 +26,6 @@ export default function Navbar() {
             <li>
               <Link
                 activeClass='active'
-                to='section1'
-                spy={true}
-                smooth={true}
-                offset={offsetHeight}
-                duration={500}>
-                Victoria
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass='active'
                 to='section2'
                 spy={true}
                 smooth={true}
@@ -54,6 +43,17 @@ export default function Navbar() {
                 offset={offsetHeight}
                 duration={500}>
                 Register
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='section1'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Victoria
               </Link>
             </li>
           </ul>

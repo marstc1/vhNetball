@@ -9,6 +9,7 @@ export default class Header extends Component {
         <div className='container'>
           <div>
             <h1>Saturday 17th July 2021</h1>
+            <h2>City Academy</h2>
             <p>
               We are really excited to be planning a tournament this year and
               really hope that after a year of limited to no netball you are all

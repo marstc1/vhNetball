@@ -6,9 +6,8 @@ export default class Victoria extends Component {
     return (
       <div id='section1' className='section one'>
         <div className='container'>
-          <h2>Victoria</h2>
+          <h2 style={{ textAlign: "left" }}>A little bit about Victoria ...</h2>
           <img src={victoria} alt='Victoria' className='victoria' />
-          <p>A little bit about Victoria ...</p>
           <p>
             Victoria worked in the Accident and Emergency unit at the Norfolk
             and Norwich hospital and was diagnosed with cardiomyopathy,
