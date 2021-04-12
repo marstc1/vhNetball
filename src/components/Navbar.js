@@ -31,7 +31,18 @@ export default function Navbar() {
                 smooth={true}
                 offset={offsetHeight}
                 duration={500}>
-                Event Information
+                Event Info
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
+                to='sectionPreviousEvents'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Previous Events
               </Link>
             </li>
             <li>

@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Header from "./components/sections/Header";
 import Victoria from "./components/sections/Victoria";
 import Event from "./components/sections/Event";
+import PreviousEvents from "./components/sections/PreviousEvents";
 import Registration from "./components/sections/Registration";
 import Footer from "./components/sections/Footer";
 
@@ -25,6 +26,7 @@ function App() {
       <Navbar />
       <Header />
       <Event />
+      <PreviousEvents />
       {registrationOpen && <Registration />}
       <Victoria />
       <Footer />

@@ -165,6 +165,24 @@ h2 {
   background: var(--limaGreen);
 }
 
+.sectionPreviousEvents {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
+
+.sectionPreviousEvents h3 {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.sectionPreviousEvents h3:first-of-type {
+  padding-top: 0;
+}
+
+.sectionPreviousEvents .thankYouPhoto {
+  width: 100%;
+}
+
 .section.one {
   background: var(--lightGrey);
   position: relative;
@@ -196,7 +214,7 @@ h2 {
 
 .eventInfo li {
   display: flex;
-  padding: 1.5em 2em;
+  padding: 1.5em 1em;
 }
 
 .eventInfo .icon {
@@ -314,5 +332,12 @@ footer a {
 
   .eventInfo li {
     padding: 0 0 2em;
+  }
+
+  .sectionPreviousEvents .thankYouPhoto {
+    width: 30rem;
+    float: right;
+    margin-left: 2rem;
+    transform: rotate(2deg);
   }
 }

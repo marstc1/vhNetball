@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ImageGallery from "react-image-gallery";
 import {
   FaBirthdayCake,
   FaCalendarAlt,
@@ -7,64 +6,6 @@ import {
   FaMapMarkerAlt,
   FaCoins,
 } from "react-icons/fa";
-
-const galleryContainerStyle = {
-  padding: "1em",
-  border: "1px solid #555",
-  borderRadius: "1rem",
-  marginBottom: "2rem",
-};
-
-const images = [
-  {
-    original: "/images/previousEvents/1.jpg",
-    thumbnail: "/images/previousEvents/1.jpg",
-  },
-  {
-    original: "/images/previousEvents/2.jpg",
-    thumbnail: "/images/previousEvents/2.jpg",
-  },
-  {
-    original: "/images/previousEvents/3.jpg",
-    thumbnail: "/images/previousEvents/3.jpg",
-  },
-  {
-    original: "/images/previousEvents/4.jpg",
-    thumbnail: "/images/previousEvents/4.jpg",
-  },
-  {
-    original: "/images/previousEvents/5.jpg",
-    thumbnail: "/images/previousEvents/5.jpg",
-  },
-  {
-    original: "/images/previousEvents/6.jpg",
-    thumbnail: "/images/previousEvents/6.jpg",
-  },
-  {
-    original: "/images/previousEvents/1.jpg",
-    thumbnail: "/images/previousEvents/1.jpg",
-  },
-  {
-    original: "/images/previousEvents/2.jpg",
-    thumbnail: "/images/previousEvents/2.jpg",
-  },
-  {
-    original: "/images/previousEvents/3.jpg",
-    thumbnail: "/images/previousEvents/3.jpg",
-  },
-  {
-    original: "/images/previousEvents/4.jpg",
-    thumbnail: "/images/previousEvents/4.jpg",
-  },
-  {
-    original: "/images/previousEvents/5.jpg",
-    thumbnail: "/images/previousEvents/5.jpg",
-  },
-  {
-    original: "/images/previousEvents/6.jpg",
-    thumbnail: "/images/previousEvents/6.jpg",
-  },
-];
 
 export default class Event extends Component {
   render() {
@@ -114,20 +55,6 @@ export default class Event extends Component {
               opportunity to get everyone back together for a fantastic day
               raising money for Nelsons Journey.
             </p>
-
-            <p style={{ marginTop: "2em" }}>
-              Here are some of our favourite photos from previous years.
-            </p>
-            <div style={galleryContainerStyle}>
-              <ImageGallery
-                autoPlay
-                showPlayButton={false}
-                slideInterval={5000}
-                infinite
-                lazyLoad
-                items={images}
-              />
-            </div>
           </div>
 
           <h2 className='mobileOnly'>Key Information</h2>
