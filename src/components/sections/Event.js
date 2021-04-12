@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Gallery from "react-photo-gallery";
-import { photos } from "../../images/previous-events/photos";
+import ImageGallery from "react-image-gallery";
 
 const galleryContainerStyle = {
   padding: "1em",
@@ -8,6 +7,33 @@ const galleryContainerStyle = {
   borderRadius: "1rem",
   marginBottom: "2rem",
 };
+
+const images = [
+  {
+    original: "/images/previousEvents/1.jpg",
+    thumbnail: "/images/previousEvents/1.jpg",
+  },
+  {
+    original: "/images/previousEvents/2.jpg",
+    thumbnail: "/images/previousEvents/2.jpg",
+  },
+  {
+    original: "/images/previousEvents/3.jpg",
+    thumbnail: "/images/previousEvents/3.jpg",
+  },
+  {
+    original: "/images/previousEvents/4.jpg",
+    thumbnail: "/images/previousEvents/4.jpg",
+  },
+  {
+    original: "/images/previousEvents/5.jpg",
+    thumbnail: "/images/previousEvents/5.jpg",
+  },
+  {
+    original: "/images/previousEvents/6.jpg",
+    thumbnail: "/images/previousEvents/6.jpg",
+  },
+];
 
 export default class Event extends Component {
   render() {
@@ -60,7 +86,14 @@ export default class Event extends Component {
             Here are some of our favourite photos from previous years.
           </p>
           <div style={galleryContainerStyle}>
-            <Gallery margin={4} photos={photos} direction={"column"} />
+            <ImageGallery
+              autoPlay
+              showPlayButton={false}
+              slideInterval={5000}
+              infinite
+              lazyLoad
+              items={images}
+            />
           </div>
         </div>
       </div>
