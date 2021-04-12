@@ -16,7 +16,7 @@ import "./css/socialsBar.css";
 import "./css/forms.css";
 import "./css/footer.css";
 
-const registrationOpen = false;
+const registrationOpen = true;
 
 function App() {
   return (

@@ -8,48 +8,38 @@ export default class Header extends Component {
       <header id='header' className='full-height-window'>
         <div className='container'>
           <div>
-            <h2>Event Cancelled</h2>
+            <h1>Saturday 17th July 2021</h1>
             <p>
-              For the past 5 consecutive years we have held an annual netball
-              tournament to honour our friend and team mate{" "}
-              <Link
-                to='section1'
-                spy={true}
-                smooth={true}
-                offset={-90}
-                duration={500}>
-                Victoria Hawkins
-              </Link>{" "}
-              who passed away unexpectedly in 2014.
+              We are really excited to be planning a tournament this year and
+              really hope that after a year of limited to no netball you are all
+              equally excited. At present the roadmap to return to netball shows
+              that no earlier than 21st June that tournaments can resume so with
+              everything crossed we will be in a position to host the tournament
+              this year.
             </p>
 
             <p>
-              Due to so much uncertainty around when it will be safe to organise
-              a large event, it is with a heavy heart that we have made the
-              sensible decision to postpone until 2021, when we will be back
-              even stronger than before.
+              We have booked the 17th July 2021 at City Academy and plan to
+              approach the day as previous years following any additional COVID
+              precautions as per government guidelines at that time.
             </p>
 
             <p>
-              If you would still like to donate to Nelson's Journey, a local
-              charity that supports bereaved children and young people in
-              Norfolk, then you can still do this via our{" "}
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=15.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-                Just Giving
-              </a>{" "}
-              page.
+              If the roadmap dates change and we need to reschedule then we will
+              do so with a date in September, teams will be able to keep their
+              place or if the date doesn’t work can get their deposit refunded.
             </p>
 
-            <a
-              className='btn btn-primary right'
-              target='_blank'
-              rel='noopener noreferrer'
-              href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=15.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-              Donate
-            </a>
+            <Link
+              activeClass='active'
+              to='section3'
+              spy={true}
+              smooth={true}
+              offset={-90}
+              duration={500}
+              className='btn btn-primary right'>
+              Register Now
+            </Link>
           </div>
         </div>
         <SocialsBar />

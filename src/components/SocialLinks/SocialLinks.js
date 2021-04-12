@@ -6,18 +6,13 @@ const SocialLinks = () => {
     {
       name: "facebook",
       link: "https://www.facebook.com/mccarthynetball",
-      icon: <FaFacebookSquare />
+      icon: <FaFacebookSquare />,
     },
     {
       name: "instagram",
       link: "https://www.instagram.com/",
-      icon: <FaInstagram />
+      icon: <FaInstagram />,
     },
-    {
-      name: "twitter",
-      link: "https://twitter.com/mccarthynetball?lang=en",
-      icon: <FaTwitter />
-    }
   ];
 
   return (
