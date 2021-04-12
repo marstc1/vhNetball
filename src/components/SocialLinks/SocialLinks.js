@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookSquare, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const SocialLinks = () => {
   const socials = [
