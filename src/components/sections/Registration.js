@@ -8,9 +8,6 @@ const Registration = () => {
     <div id='section3' className='section three'>
       <div className='container'>
         <h2>Register</h2>
-        <div className='section-content'>
-          <NetlifyRegistrationForm formSubmitHandler={setFormSubmitted} />
-        </div>
         {formSubmitted === "false" && (
           <p className='already-registered'>
             Already registered? Visit our{" "}
@@ -20,6 +17,9 @@ const Registration = () => {
             page to submit your entry fee.
           </p>
         )}
+        <div className='section-content'>
+          <NetlifyRegistrationForm formSubmitHandler={setFormSubmitted} />
+        </div>
       </div>
     </div>
   );
