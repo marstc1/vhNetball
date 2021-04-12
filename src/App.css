@@ -74,6 +74,10 @@ body {
   line-height: 1.4;
 }
 
+.App {
+  background: #999;
+}
+
 .full-height-window {
   height: 100vh;
   min-height: 450px;
@@ -154,7 +158,7 @@ h2 {
 
 /* Sections */
 .section {
-  padding: 5px;
+  padding: 1px 5px;
 }
 
 .section.socials {
@@ -166,6 +170,8 @@ h2 {
   position: relative;
   color: var(--offWhite);
   padding-bottom: 2em;
+  max-width: 67.5rem;
+  margin: 0 auto;
 }
 
 .section.one .victoria {
@@ -180,6 +186,32 @@ h2 {
 .section.two {
   color: var(--mainWhite);
   background: var(--mainGrey);
+}
+
+.eventInfo {
+  background: var(--limaGreen);
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.eventInfo li {
+  display: flex;
+  padding: 1.5em 2em;
+}
+
+.eventInfo .icon {
+  min-width: 3.5rem;
+  font-size: 2.5em;
+}
+
+.eventInfo p {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.eventInfo .icon,
+.eventInfo h3 {
+  color: var(--mainBlack);
 }
 
 .section.three {
@@ -216,9 +248,25 @@ footer a {
   color: var(--mainWhite);
 }
 
+.desktopOnly {
+  display: none;
+}
+
+.mobileOnly {
+  display: block;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 768px) {
+  .desktopOnly {
+    display: block;
+  }
+
+  .mobileOnly {
+    display: none;
+  }
+
   h2 {
     margin: 1.5em 0;
   }
@@ -247,5 +295,24 @@ footer a {
     z-index: 1;
     background: url(./images/victoria.jpg) right center no-repeat;
     background-size: cover;
+  }
+
+  .section.two .container {
+    display: flex;
+    padding-right: 0;
+  }
+
+  .eventAbout {
+    max-width: 70%;
+    padding-right: 10px;
+  }
+
+  .eventInfo {
+    margin-bottom: 0;
+    max-width: 30%;
+  }
+
+  .eventInfo li {
+    padding: 0 0 2em;
   }
 }
