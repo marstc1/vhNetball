@@ -41,7 +41,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Registration V1", ...values }),
+      body: encode({ "form-name": "EventRegistration2021v1", ...values }),
     })
       .then(() => {
         resetForm({});
@@ -120,13 +120,17 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
         return (
           <>
             <form
-              name='Registration v1'
+              name='EventRegistration2021v1'
               autoComplete='off'
               onSubmit={handleSubmit}
               method='post'
               data-netlify='true'
               dat-netlify-honeypot='bot-field'>
-              <input type='hidden' name='form-name' value='Registration v1' />
+              <input
+                type='hidden'
+                name='form-name'
+                value='EventRegistration2021v1'
+              />
               <div hidden>
                 <input name='bot-field' />
               </div>
