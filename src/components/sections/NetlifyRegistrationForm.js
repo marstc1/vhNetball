@@ -41,7 +41,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "Registration", ...values }),
+      body: encode({ "form-name": "Registration V1", ...values }),
     })
       .then(() => {
         resetForm({});
