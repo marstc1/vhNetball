@@ -153,16 +153,17 @@ footer .container {
 
 h2 {
   text-align: center;
-  margin: 0.5em 0;
+  margin: 1em 0;
 }
 
 /* Sections */
 .section {
-  padding: 1px 5px;
+  padding: 4rem 0.5rem;
 }
 
 .section.socials {
   background: var(--limaGreen);
+  padding: 0 0.5rem;
 }
 
 .sectionPreviousEvents {
@@ -204,6 +205,7 @@ h2 {
 .section.two {
   color: var(--mainWhite);
   background: var(--mainGrey);
+  padding: 4rem 0;
 }
 
 .eventInfo {
@@ -290,7 +292,7 @@ footer a {
   }
 
   .section.one .container {
-    padding-left: calc(50% - 6.25rem);
+    padding-left: calc(60% - 0.5rem);
   }
 
   .section.one .victoria {
@@ -309,7 +311,7 @@ footer a {
   }
 
   .section.one:after {
-    width: calc(50% - 8.75rem);
+    width: calc(50% - 2rem);
     z-index: 1;
     background: url(./images/victoria.jpg) right center no-repeat;
     background-size: cover;
@@ -322,7 +324,7 @@ footer a {
 
   .eventAbout {
     max-width: 70%;
-    padding-right: 10px;
+    padding-right: 2rem;
   }
 
   .eventInfo {
@@ -331,7 +333,7 @@ footer a {
   }
 
   .eventInfo li {
-    padding: 0 0 2em;
+    padding: 0 0 2rem;
   }
 
   .sectionPreviousEvents .thankYouPhoto {

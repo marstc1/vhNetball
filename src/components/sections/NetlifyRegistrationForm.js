@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import * as Scroll from "react-scroll";
+// import { animateScroll as scroll } from 'react-scroll'
 
 const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
   const encode = (data) => {
@@ -27,7 +29,10 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryContactNumber: "",
     secondaryEmail: "",
     isCompetitive: "",
+    umpireName: "",
   };
+
+  var scroller = Scroll.scroller;
 
   const handleSubmit = (
     values,
@@ -42,6 +47,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
         resetForm({});
         setStatus({ success: true });
         formSubmitHandler("true");
+        scroller.scrollTo("section3");
         console.log("Success");
       })
       .catch((error) => {
@@ -61,7 +67,13 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryContactNumber: contactNumberValidation,
     secondaryEmail: Yup.string().email().required("Please enter an email"),
     isCompetitive: Yup.string().required("Please select an option"),
+    umpireName: Yup.string().when("isCompetitive", {
+      is: (val) => val === "Competitive - I am playing to win!",
+      then: Yup.string().required("Please enter the name of your umpire"),
+    }),
   });
+
+  const [competitive, setCompetitive] = useState(false);
 
   return (
     <Formik
@@ -79,6 +91,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
           handleBlur,
           handleSubmit,
           setFieldValue,
+          setErrors,
         } = props;
 
         if (!!status && !!status.success) {
@@ -87,25 +100,18 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <h3 className='pad-bottom-lg'>
                 Fantastic! - You have been registered
               </h3>
-              <p>Just a couple of things to do before the big day ...</p>
-              <ol className='pad-bottom-lg'>
-                <li className='pad-bottom-sm'>
-                  Please submit your entry fee of <strong>£30</strong> using our
-                  <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-                    {" Just Giving "}
-                  </a>
-                  page.
-                </li>
-                <li>
-                  A deposit of <strong>£50</strong> can be sent by cheque to
-                  sent to; <br />
-                  <strong>
-                    Lisa Price, 7 Charolais Close, Trowse, Norwich, NR14 8GD
-                  </strong>
-                  <br />
-                  (this cheque will be returned to you at the event).
-                </li>
-              </ol>
+              <p>
+                To complete your entry please submit the entry fee of £40 to our
+                <a
+                  href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  {" Virgin Money Giving "}
+                </a>
+                page, including your team name so that we can match your payment
+                with your entry. We will then be in touch to confirm details of
+                the day and next steps.
+              </p>
               <p>Thank you – we look forward to seeing you at this event!</p>
             </div>
           );
@@ -263,14 +269,18 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                         values.isCompetitive ===
                         "Competitive - I am playing to win!"
                       }
-                      onChange={() =>
+                      onChange={() => {
                         setFieldValue(
                           "isCompetitive",
                           "Competitive - I am playing to win!"
-                        )
-                      }
+                        );
+                        setCompetitive(true);
+                      }}
                     />
-                    <span className={errors.isCompetitive && "error"}>
+                    <span
+                      className={
+                        errors.isCompetitive && touched.isCompetitive && "error"
+                      }>
                       Competitively
                     </span>
                   </label>
@@ -282,11 +292,17 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                       id='isCompetitiveN'
                       name='isCompetitive'
                       checked={values.isCompetitive === "Just for fun!"}
-                      onChange={() =>
-                        setFieldValue("isCompetitive", "Just for fun!")
-                      }
+                      onChange={() => {
+                        setFieldValue("isCompetitive", "Just for fun!");
+                        setFieldValue("umpireName", "");
+                        setCompetitive(false);
+                      }}
+                      onBlur={() => setErrors({})}
                     />
-                    <span className={errors.isCompetitive && "error"}>
+                    <span
+                      className={
+                        errors.isCompetitive && touched.isCompetitive && "error"
+                      }>
                       Just for fun!
                     </span>
                   </label>
@@ -300,7 +316,31 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                   <div data-netlify-recaptcha='true'></div>
                 </div>
               </div>
-
+              {competitive && (
+                <>
+                  <label htmlFor='umpireName'>Umpire Name</label>
+                  <p class='smallHelp'>
+                    Please note, your umpiring fixtures may be at the same time
+                    as your playing fixtures so please ensure you can cover
+                    both.
+                  </p>
+                  <input
+                    type='text'
+                    value={values.umpireName}
+                    id='umpireName'
+                    name='umpireName'
+                    placeholder='Enter the name of your umpire'
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    className={
+                      errors.umpireName && touched.umpireName && "error"
+                    }
+                  />
+                  {errors.umpireName && touched.umpireName && (
+                    <div className='input-feedback'>{errors.umpireName}</div>
+                  )}
+                </>
+              )}
               <button
                 className='btn btn-primary right'
                 type='submit'

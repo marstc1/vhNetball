@@ -12,35 +12,103 @@ const galleryContainerStyle = {
 const images = [
   {
     original: "/images/previousEvents/1.jpg",
-    thumbnail: "/images/previousEvents/1.jpg",
+    thumbnail: "/images/previousEvents/1_small.jpg",
   },
   {
     original: "/images/previousEvents/2.jpg",
-    thumbnail: "/images/previousEvents/2.jpg",
+    thumbnail: "/images/previousEvents/2_small.jpg",
   },
   {
     original: "/images/previousEvents/3.jpg",
-    thumbnail: "/images/previousEvents/3.jpg",
+    thumbnail: "/images/previousEvents/3_small.jpg",
   },
   {
     original: "/images/previousEvents/4.jpg",
-    thumbnail: "/images/previousEvents/4.jpg",
+    thumbnail: "/images/previousEvents/4_small.jpg",
   },
   {
-    original: "/images/previousEvents/1.jpg",
-    thumbnail: "/images/previousEvents/1.jpg",
+    original: "/images/previousEvents/2018_1.jpg",
+    thumbnail: "/images/previousEvents/2018_1_small.jpg",
   },
   {
-    original: "/images/previousEvents/2.jpg",
-    thumbnail: "/images/previousEvents/2.jpg",
+    original: "/images/previousEvents/2018_2.jpg",
+    thumbnail: "/images/previousEvents/2018_2_small.jpg",
   },
   {
-    original: "/images/previousEvents/3.jpg",
-    thumbnail: "/images/previousEvents/3.jpg",
+    original: "/images/previousEvents/2018_3.jpg",
+    thumbnail: "/images/previousEvents/2018_3_small.jpg",
   },
   {
-    original: "/images/previousEvents/4.jpg",
-    thumbnail: "/images/previousEvents/4.jpg",
+    original: "/images/previousEvents/2018_4.jpg",
+    thumbnail: "/images/previousEvents/2018_4_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2018_5.jpg",
+    thumbnail: "/images/previousEvents/2018_5_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2018_6.jpg",
+    thumbnail: "/images/previousEvents/2018_6_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2018_7.jpg",
+    thumbnail: "/images/previousEvents/2018_7_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2018_8.jpg",
+    thumbnail: "/images/previousEvents/2018_8_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_1.jpg",
+    thumbnail: "/images/previousEvents/2019_1_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_2.jpg",
+    thumbnail: "/images/previousEvents/2019_2_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_3.jpg",
+    thumbnail: "/images/previousEvents/2019_3_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_4.jpg",
+    thumbnail: "/images/previousEvents/2019_4_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_5.jpg",
+    thumbnail: "/images/previousEvents/2019_5_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_6.jpg",
+    thumbnail: "/images/previousEvents/2019_6_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_7.jpg",
+    thumbnail: "/images/previousEvents/2019_7_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_8.jpg",
+    thumbnail: "/images/previousEvents/2019_8_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_9.jpg",
+    thumbnail: "/images/previousEvents/2019_9_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_10.jpg",
+    thumbnail: "/images/previousEvents/2019_10_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_11.jpg",
+    thumbnail: "/images/previousEvents/2019_11_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_12.jpg",
+    thumbnail: "/images/previousEvents/2019_12_small.jpg",
+  },
+  {
+    original: "/images/previousEvents/2019_13.jpg",
+    thumbnail: "/images/previousEvents/2019_13_small.jpg",
   },
 ];
 
@@ -54,7 +122,7 @@ export default class PreviousEvents extends Component {
           <img
             className='thankYouPhoto'
             src={photo}
-            alt='Members of the Victoria Hawkins Netball Tournament committee being presented with a large cheque showing they have raised over £10000 for Nelsons Journey'
+            alt='Members of the Victoria Hawkins Netball Tournament committee being presented with a thank you for raising over £10000 for Nelsons Journey'
           />
           <p>
             Our previous tournaments, as well as other fund raising activities

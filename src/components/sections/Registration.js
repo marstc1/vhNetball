@@ -9,17 +9,55 @@ const Registration = () => {
       <div className='container'>
         <h2>Register</h2>
         {formSubmitted === "false" && (
-          <p className='already-registered'>
-            Already registered? Visit our{" "}
-            <a href='http://link.justgiving.com/v1/fundraisingpage/donate/pageId/10843969?amount=30.00&currency=GBP&reference=EF30&exitUrl=https%3A%2F%2Fvhnetball.netlify.com%2F%3FjgDonationId%3DJUSTGIVING-DONATION-ID&message=Tounament%20entry%20fee'>
-              {" Just Giving "}
-            </a>{" "}
-            page to submit your entry fee.
-          </p>
+          <>
+            <p>
+              To enter a team into either the fun or competitive tournament,
+              please complete the registration form below.
+            </p>
+            <p>
+              After submitting your request you will be prompted to submit your
+              entry fee of £40 on our{" "}
+              <a
+                href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+                target='_blank'
+                rel='noopener noreferrer'>
+                {" Virgin Money Giving "}
+              </a>{" "}
+              page.{" "}
+            </p>
+            <p>
+              Once both steps are complete we will be in touch to confirm your
+              place in the tournament. There will no longer be the need to send
+              a returnable deposit, however please be reminded that the entry
+              fee is non refundable*
+            </p>
+            <p>
+              *the only exception to this is if the tournament date needs to be
+              rescheduled due to a change in the return to netball roadmap due
+              to Covid. If the date needs to move and you can no longer field a
+              team for the rescheduled date, as long as notice is provided
+              within 7 days of the new date being communicated then we will
+              return your entry fee.{" "}
+            </p>
+          </>
         )}
+
         <div className='section-content'>
           <NetlifyRegistrationForm formSubmitHandler={setFormSubmitted} />
         </div>
+
+        {formSubmitted === "false" && (
+          <p className='already-registered'>
+            Already registered? Visit our{" "}
+            <a
+              href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+              target='_blank'
+              rel='noopener noreferrer'>
+              {" Virgin Money Giving "}
+            </a>
+            page to submit your £40 entry fee.
+          </p>
+        )}
       </div>
     </div>
   );

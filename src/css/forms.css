@@ -110,6 +110,12 @@ form .btn:hover {
   top: -10px;
 }
 
+form p.smallHelp {
+  font-weight: normal;
+  font-size: 0.7rem;
+  padding-top: 0;
+}
+
 span.error,
 input.error {
   border: 2px solid var(--crimsonRed);
