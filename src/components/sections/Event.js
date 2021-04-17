@@ -106,10 +106,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Cost</h3>
-                  <p>
-                    £30 entry fee per tournament
-                    <br /> £50 deposit per team
-                  </p>
+                  <p>£40 entry fee per tournament</p>
                 </div>
               </li>
               <li>
