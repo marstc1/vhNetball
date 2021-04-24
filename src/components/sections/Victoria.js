@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import victoria from "../../images/victoria-profile.jpg";
-import marathon from "../../images/marathon.jpg";
 
 export default class Victoria extends Component {
   render() {
@@ -51,17 +50,6 @@ export default class Victoria extends Component {
             Nelsons Journey for hitting the £10,000 raised since the tournament
             began in 2015.
           </p>
-          <p>
-            Last year as we couldn’t hold the tournament I raised money by
-            running my first ever marathon, adding another £2275 to our grand
-            total over the years. We really hope that this year we can raise
-            further much needed funds for such an amazing cause.
-          </p>
-          <img
-            src={marathon}
-            alt='Lisa running a marathon'
-            style={{ width: "100%" }}
-          />
           <p>We hope you will be able to join us on the day.</p>
         </div>
       </div>

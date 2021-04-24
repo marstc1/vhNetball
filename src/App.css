@@ -188,7 +188,6 @@ h2 {
   background: var(--lightGrey);
   position: relative;
   color: var(--offWhite);
-  padding-bottom: 2em;
   max-width: 67.5rem;
   margin: 0 auto;
 }
@@ -301,30 +300,8 @@ footer a {
     margin: 1.5em 0;
   }
 
-  .section.one .container {
-    padding-left: calc(60% - 0.5rem);
-  }
-
   .section.one .victoria {
-    display: none;
-  }
-
-  .section.one:before,
-  .section.one:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .section.one:after {
-    width: calc(50% - 2rem);
-    z-index: 1;
-    background: url(./images/victoria.jpg) right center no-repeat;
-    background-size: cover;
+    width: 50%;
   }
 
   .section.two .container {
