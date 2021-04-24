@@ -10,7 +10,7 @@ const SocialLinks = () => {
     },
     {
       name: "instagram",
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/victorias_NJNetball/",
       icon: <FaInstagram />,
     },
   ];

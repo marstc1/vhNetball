@@ -9,9 +9,9 @@ export default class Footer extends Component {
           <p>
             Questions or comments? Please email&nbsp;
             <a
-              href='mailto:lisajane0303@gmail.com'
+              href='mailto:victoriahawkinsnetball@gmail.com'
               subject='VH Netball Tournament Question'>
-              lisajane0303@gmail.com
+              victoriahawkinsnetball@gmail.com
             </a>
           </p>
           <SocialLinks />

@@ -29,9 +29,9 @@ export default class Victoria extends Component {
           <p>
             The aim of our annual netball tournament is to celebrate the memory
             of Victoria Hawkins, a fantastic netballer who was well known in the
-            netball community for playing for McCarthy Stars and Panthers. This
-            also gives us an opportunity to raise lots of money for Nelsons
-            Journey a local charity which is very close to our hearts.
+            netball community for playing for McCarthy Stars and Panthers. The
+            tournament also gives us an opportunity to raise lots of money for
+            Nelsons Journey a local charity which is very close to our hearts.
           </p>
           <p>
             Nelsons Journey have been a continuous support to Victoria’s

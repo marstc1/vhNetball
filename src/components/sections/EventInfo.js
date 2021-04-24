@@ -33,15 +33,7 @@ export default class EventInfo extends Component {
           <p>
             Numbers are limited and entry is on a first come first served basis.
           </p>
-          <p>
-            Application forms are to be returned to Lisa Price, 7 Charolais
-            Close, Trowse, Norwich, NR14 8GD by 16th June.
-          </p>
-          <p>Cost - Entry fee per tournament is £30</p>
-          <p>
-            A deposit of £50 per team is required and will be returned on the
-            day when you register at the tournament.
-          </p>
+          <p>Cost - Entry fee per tournament is £40</p>
           <p>
             Any cancellations must be given in writing at least 72 hours prior
             to the tournament.

@@ -16,11 +16,12 @@ export default class Event extends Component {
             <h2>About the Event</h2>
             <p>
               We’ve had lots of great feedback over the years with the format
-              and style of the tournament, so this we year plan to approach it
-              in the same way.
+              and style of the tournament, so this year we plan to approach it
+              in the same way. The day will be split into 2 sessions:
             </p>
 
-            <p>The day will be split into 2 sessions:</p>
+            <h3>The Morning Session</h3>
+            <span class='small'>Registration: 9.30am - Start: 10.00am</span>
 
             <p>
               The morning will be a friendly but still competitive tournament
@@ -32,6 +33,9 @@ export default class Event extends Component {
               become almost more competitive than the afternoon session, places
               fill up quick so please enter your team today!
             </p>
+
+            <h3>The Afternoon Session</h3>
+            <span class='small'>Registration: 11:45am - Start: 12:15pm</span>
 
             <p>
               The afternoon session is for affiliated players, in a competitive
@@ -82,7 +86,7 @@ export default class Event extends Component {
                 <div className='listItem'>
                   <h3>Closing Date</h3>
                   <p>
-                    11th July 2021
+                    2nd July 2021
                     <br /> unless places filled earlier
                   </p>
                 </div>
