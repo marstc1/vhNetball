@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
 import photo from "../../images/nelsons-thank-you.jpg";
+import marathon from "../../images/marathon.jpg";
 
 const galleryContainerStyle = {
   padding: "1em",
@@ -155,6 +156,38 @@ export default class PreviousEvents extends Component {
               items={images}
             />
           </div>
+          <h3>The Marathon</h3>
+          <img
+            src={marathon}
+            alt='Lisa running a marathon with Julz Williams'
+            className='thankYouPhoto'
+          />
+          <p>
+            2020 was a tough year for us all, we all done our bit to help fight
+            the fight against the spread of the coronavirus. The vital
+            government restrictions that were in place at the time meant that we
+            were unable to hold our tournament.
+          </p>
+
+          <p>
+            We were obviously disappointed however this was absolutely the right
+            thing to do at the time to ensure the safety of all involved,
+            however no tournament also meant that we were unable to raise money
+            for Nelsons Journey ... or did it?
+          </p>
+
+          <p>
+            Lisa Price (Victoria Hawkins Netball Tournament Organiser) had a
+            think, ‘what else could we do instead to help raise money for
+            Nelsons Journey? ... hmmm, I know .. I will run a marathon!’ ... her
+            first ever marathon!
+          </p>
+
+          <p>
+            Supported by her friend Julz Williams, they plotted a 26.2 mile
+            route around Norwich which they completed on the 13th November
+            raising a fabulous £2275 for Nelsons Journey.
+          </p>
         </div>
       </div>
     );
