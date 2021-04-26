@@ -159,34 +159,36 @@ export default class PreviousEvents extends Component {
           <h3>The Marathon</h3>
           <img
             src={marathon}
-            alt='Lisa running a marathon with Julz Williams'
+            alt='Lisa Price (left) running a marathon with Julz Williams (right)'
             className='thankYouPhoto'
           />
           <p>
-            2020 was a tough year for us all, we all done our bit to help fight
-            the fight against the spread of the coronavirus. The vital
-            government restrictions that were in place at the time meant that we
-            were unable to hold our tournament.
+            2020 was a tough year for everyone, with us all doing our bit to
+            fight back against the spread of Coronavirus. The vital government
+            restrictions that were in place at the time, meant that we were
+            unable to host the tournament. At a time when a charity like
+            Nelson's Journey needed vital fundraising the most our usual
+            contribution from the tournament was put on hold meaning we couldn't
+            raise money for them.....or did it?!
           </p>
 
           <p>
-            We were obviously disappointed however this was absolutely the right
-            thing to do at the time to ensure the safety of all involved,
-            however no tournament also meant that we were unable to raise money
-            for Nelsons Journey ... or did it?
+            Lisa Price (Victoria Hawkins memorial Netball tournament organiser)
+            had been running throughout the pandemic to support her own
+            wellbeing, deciding to embark on her biggest running challenge yet
+            having completed a number of half marathons previously she decided
+            to begin training for a marathon. As the 16 week plan progressed, it
+            became clear how much grit and determination would be needed to run
+            the distance when no organised events were taking place. So she
+            decided along with the amazing support of her best friend Julz
+            Williams to share her plans to keep her motivated and in the process
+            commit to raising funds for Nelson's Journey.
           </p>
 
           <p>
-            Lisa Price (Victoria Hawkins Netball Tournament Organiser) had a
-            think, ‘what else could we do instead to help raise money for
-            Nelsons Journey? ... hmmm, I know .. I will run a marathon!’ ... her
-            first ever marathon!
-          </p>
-
-          <p>
-            Supported by her friend Julz Williams, they plotted a 26.2 mile
-            route around Norwich which they completed on the 13th November
-            raising a fabulous £2275 for Nelsons Journey.
+            Together they plotted a 26.2 mile route around Norwich which they
+            completed on the 13th November raising a fabulous £2275 for Nelsons
+            Journey.
           </p>
         </div>
       </div>

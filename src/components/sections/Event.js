@@ -17,11 +17,14 @@ export default class Event extends Component {
             <p>
               We’ve had lots of great feedback over the years with the format
               and style of the tournament, so this year we plan to approach it
-              in the same way. The day will be split into 2 sessions:
+              in the same way. The day will be split into 2 sessions, places
+              fill up quick so please enter your team today!
             </p>
 
             <h3>The Morning Session</h3>
-            <span class='small'>Registration: 9.30am - Start: 10.00am</span>
+            <span class='small'>
+              Registration: 9.30am - Start: 10.00am - Finish: approx 12:30pm
+            </span>
 
             <p>
               The morning will be a friendly but still competitive tournament
@@ -30,12 +33,13 @@ export default class Event extends Component {
               wish and can include up to 3 affiliated netballers in the team -
               however only 2 of these players can be on court at one time. The
               fun tournament is the highlight of the day and over the years has
-              become almost more competitive than the afternoon session, places
-              fill up quick so please enter your team today!
+              become almost more competitive than the afternoon session.
             </p>
 
             <h3>The Afternoon Session</h3>
-            <span class='small'>Registration: 11:45am - Start: 12:15pm</span>
+            <span class='small'>
+              Registration: 11:45am - Start: 12:15pm - Finish: approx 3:30pm
+            </span>
 
             <p>
               The afternoon session is for affiliated players, in a competitive
@@ -43,8 +47,7 @@ export default class Event extends Component {
               2 groups with a semi and final to determine winners. Again we have
               enjoyed welcoming a range of teams into this session, we always
               try and group similar div teams together so that it’s a really
-              enjoyable afternoon and places also fill up quickly, so enter
-              today!
+              enjoyable afternoon.
             </p>
 
             <p>
