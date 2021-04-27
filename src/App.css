@@ -123,8 +123,8 @@ nav .container {
 }
 
 header .container {
-  width: 90%;
-  font-size: 0.8em;
+  width: 100%;
+  font-size: 0.65rem;
 }
 
 footer .container {
@@ -286,6 +286,18 @@ footer a {
 }
 
 /* Media Queries */
+
+@media only screen and (min-width: 375px) {
+  header .container {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  header .container {
+    font-size: 0.8rem;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .desktopOnly {
