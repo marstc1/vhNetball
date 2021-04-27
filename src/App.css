@@ -187,7 +187,7 @@ h2 {
 .section.one {
   background: var(--lightGrey);
   position: relative;
-  color: var(--offWhite);
+  color: var(--mainBlack);
   max-width: 67.5rem;
   margin: 0 auto;
 }
