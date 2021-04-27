@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import logo from "../images/butterfly-logo.png";
 
 export default function Navbar() {
-  const offsetHeight = -90;
+  const offsetHeight = -15;
   const displayNavLinks = true;
 
   return (
