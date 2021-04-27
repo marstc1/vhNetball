@@ -68,7 +68,7 @@ form .btn:hover {
   display: block;
   text-align: center;
   background-color: var(--mainWhite);
-  color: var(--limaGreen);
+  color: var(--mainBlack);
   cursor: pointer;
   height: 42px;
   line-height: 40px;

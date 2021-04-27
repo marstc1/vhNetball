@@ -4,12 +4,12 @@ import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 const SocialLinks = () => {
   const socials = [
     {
-      name: "facebook",
+      name: "McCarthy Netball Facebook Page",
       link: "https://www.facebook.com/mccarthynetball",
       icon: <FaFacebookSquare />,
     },
     {
-      name: "instagram",
+      name: "The Victoria Hawkins Netball Instagram Page",
       link: "https://www.instagram.com/victorias_NJNetball/",
       icon: <FaInstagram />,
     },
