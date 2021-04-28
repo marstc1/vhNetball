@@ -103,10 +103,10 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <p>
                 To complete your entry please submit the entry fee of £40 to our
                 <a
-                  href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+                  href='https://paypal.me/pools/c/8yZReqJRt8'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  {" Virgin Money Giving "}
+                  {" PayPal "}
                 </a>
                 page, including your team name so that we can match your payment
                 with your entry. We will then be in touch to confirm details of

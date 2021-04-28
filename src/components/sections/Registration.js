@@ -18,10 +18,10 @@ const Registration = () => {
               After submitting your request you will be prompted to submit your
               entry fee of £40 on our{" "}
               <a
-                href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+                href='https://paypal.me/pools/c/8yZReqJRt8'
                 target='_blank'
                 rel='noopener noreferrer'>
-                {" Virgin Money Giving "}
+                {" PayPal "}
               </a>{" "}
               page.{" "}
             </p>
@@ -50,10 +50,10 @@ const Registration = () => {
           <p className='already-registered'>
             Already registered? Visit our{" "}
             <a
-              href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'
+              href='https://paypal.me/pools/c/8yZReqJRt8'
               target='_blank'
               rel='noopener noreferrer'>
-              {" Virgin Money Giving "}
+              {" PayPal "}
             </a>
             page to submit your £40 entry fee.
           </p>
