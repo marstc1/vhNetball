@@ -23,7 +23,7 @@ const Registration = () => {
                 rel='noopener noreferrer'>
                 {" PayPal "}
               </a>{" "}
-              page.{" "}
+              page (PayPal account not required).{" "}
             </p>
             <p>
               Once both steps are complete we will be in touch to confirm your
@@ -55,7 +55,7 @@ const Registration = () => {
               rel='noopener noreferrer'>
               {" PayPal "}
             </a>
-            page to submit your £40 entry fee.
+            page (PayPal account not required) to submit your £40 entry fee.
           </p>
         )}
       </div>

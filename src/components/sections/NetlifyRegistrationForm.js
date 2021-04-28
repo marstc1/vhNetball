@@ -108,9 +108,9 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                   rel='noopener noreferrer'>
                   {" PayPal "}
                 </a>
-                page, including your team name so that we can match your payment
-                with your entry. We will then be in touch to confirm details of
-                the day and next steps.
+                page (PayPal account not required), including your team name so
+                that we can match your payment with your entry. We will then be
+                in touch to confirm details of the day and next steps.
               </p>
               <p>Thank you – we look forward to seeing you at this event!</p>
             </div>
