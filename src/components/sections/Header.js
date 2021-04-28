@@ -28,8 +28,8 @@ export default class Header extends Component {
             <p>
               If the roadmap dates change and we need to reschedule then we will
               do so with a date in September, teams will be able to keep their
-              place or if the date doesn’t work can get their entry fee
-              refunded.
+              place or if the date doesn’t work can get their entry fee refunded
+              if notified within 7 days of the new date being announced.
             </p>
 
             <Link
