@@ -7,6 +7,17 @@ export default class Footer extends Component {
       <footer>
         <div className='container'>
           <p>
+            Donations gratefully received via our&nbsp;
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://uk.virginmoneygiving.com/VictoriaHawkinsNetball?amount=30.00&currency=GBP&reference=EF40&exitUrl=https%3A%2F%2Fvhnetball.netlify.com'>
+              Virgin Money Giving
+            </a>{" "}
+            page
+          </p>
+
+          <p>
             Questions or comments? Please email&nbsp;
             <a
               href='mailto:victoriahawkinsnetball@gmail.com'
@@ -14,6 +25,7 @@ export default class Footer extends Component {
               victoriahawkinsnetball@gmail.com
             </a>
           </p>
+
           <SocialLinks />
         </div>
       </footer>
