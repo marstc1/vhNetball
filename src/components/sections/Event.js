@@ -77,7 +77,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Date</h3>
-                  <p>17th July 2021</p>
+                  <p>11th Sept 2021</p>
                 </div>
               </li>
               <li>
