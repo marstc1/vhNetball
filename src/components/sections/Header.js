@@ -8,7 +8,7 @@ export default class Header extends Component {
       <header id='header' className='full-height-window'>
         <div className='container'>
           <div>
-            <h1>Saturday 17th July 2021</h1>
+            <h1>Saturday 11th September 2021</h1>
             <h2>City Academy</h2>
             <p>
               We are really excited to be planning a tournament this year and
@@ -20,7 +20,7 @@ export default class Header extends Component {
             </p>
 
             <p>
-              We have booked the 17th July 2021 at City Academy and plan to
+              We have booked the 11th September 2021 at City Academy and plan to
               approach the day as previous years following any additional COVID
               precautions as per government guidelines at that time.
             </p>
