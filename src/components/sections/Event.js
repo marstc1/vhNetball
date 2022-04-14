@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
 import {
   FaBirthdayCake,
   FaCalendarAlt,
   FaCalendarTimes,
-  FaMapMarkerAlt,
   FaCoins,
-} from "react-icons/fa";
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 
 export default class Event extends Component {
   render() {
@@ -77,7 +78,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Date</h3>
-                  <p>11th Sept 2021</p>
+                  <p>25th June 2022</p>
                 </div>
               </li>
               <li>
@@ -89,7 +90,7 @@ export default class Event extends Component {
                 <div className='listItem'>
                   <h3>Closing Date</h3>
                   <p>
-                    2nd July 2021
+                    4th June 2022
                     <br /> unless places filled earlier
                   </p>
                 </div>

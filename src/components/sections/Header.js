@@ -1,6 +1,8 @@
-import React, { Component } from "react";
-import SocialsBar from "./SocialsBar";
-import { Link } from "react-scroll";
+import React, { Component } from 'react';
+
+import { Link } from 'react-scroll';
+
+import SocialsBar from './SocialsBar';
 
 export default class Header extends Component {
   render() {
@@ -8,19 +10,10 @@ export default class Header extends Component {
       <header id='header' className='full-height-window'>
         <div className='container'>
           <div>
-            <h1>Saturday 11th September 2021</h1>
+            <h1>Saturday 25th June 2022</h1>
             <h2>City Academy</h2>
             <p>
-              We are really excited to be planning a tournament this year and
-              really hope that after a year of limited to no netball you are all
-              equally excited. At present the roadmap to return to netball shows
-              that no earlier than 21st June that tournaments can resume so with
-              everything crossed we will be in a position to host the tournament
-              this year.
-            </p>
-
-            <p>
-              We have booked the 11th September 2021 at City Academy and plan to
+              We have booked the 25th June 2022 at City Academy and plan to
               approach the day as previous years following any additional COVID
               precautions as per government guidelines at that time.
             </p>
