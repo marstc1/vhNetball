@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class EventInfo extends Component {
   render() {
@@ -33,7 +33,7 @@ export default class EventInfo extends Component {
           <p>
             Numbers are limited and entry is on a first come first served basis.
           </p>
-          <p>Cost - Entry fee per tournament is £40</p>
+          <p>Cost - Entry fee per tournament is £45</p>
           <p>
             Any cancellations must be given in writing at least 72 hours prior
             to the tournament.

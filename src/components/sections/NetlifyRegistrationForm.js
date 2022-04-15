@@ -103,7 +103,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                 Fantastic! - You have been registered
               </h3>
               <p>
-                To complete your entry please submit the entry fee of £40 to our
+                To complete your entry please submit the entry fee of £45 to our
                 <a
                   href='https://paypal.me/pools/c/8yZReqJRt8'
                   target='_blank'

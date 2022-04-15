@@ -39,7 +39,7 @@ export default class Event extends Component {
 
             <h3>The Afternoon Session</h3>
             <span class='small'>
-              Registration: 11:45am - Start: 12:15pm - Finish: approx 3:30pm
+              Registration: 12:15pm - Start: 12:45pm - Finish: approx 4:15pm
             </span>
 
             <p>
@@ -52,16 +52,11 @@ export default class Event extends Component {
             </p>
 
             <p>
-              We will again provide food and drink options for the day, these
-              are to be confirmed but we will share more as we approach the
-              date. There will also be the famous raffle, tombola and cake stall
-              for you to enjoy when you aren’t playing.
+              After the success of last years BBQ, we will be doing the same again this year and including a vegetarian option. We will also have a raffle, silent auction and cake stall (including vegan options) for you to enjoy when you aren’t playing.
             </p>
 
             <p>
-              We welcome spectators and hopefully this year will give us the
-              opportunity to get everyone back together for a fantastic day
-              raising money for Nelsons Journey.
+              Spectators all welcome, so please come along for a fantastic day raising money for Nelsons Journey.
             </p>
           </div>
 
@@ -114,7 +109,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Cost</h3>
-                  <p>£40 entry fee per tournament</p>
+                  <p>£45 entry fee per tournament</p>
                 </div>
               </li>
               <li>

@@ -13,9 +13,7 @@ export default class Header extends Component {
             <h1>Saturday 25th June 2022</h1>
             <h2>City Academy</h2>
             <p>
-              We have booked the 25th June 2022 at City Academy and plan to
-              approach the day as previous years following any additional COVID
-              precautions as per government guidelines at that time.
+              We look forward to welcoming everyone to this years netball tournament, to be held on Saturday 25th June 2022 at City Academy.
             </p>
 
             <p>

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import NetlifyRegistrationForm from "./NetlifyRegistrationForm";
+import React, { useState } from 'react';
+
+import NetlifyRegistrationForm from './NetlifyRegistrationForm';
 
 const Registration = () => {
   const [formSubmitted, setFormSubmitted] = useState("false");
@@ -16,7 +17,7 @@ const Registration = () => {
             </p>
             <p>
               After submitting your request you will be prompted to submit your
-              entry fee of £40 on our{" "}
+              entry fee of £45 on our{" "}
               <a
                 href='https://paypal.me/pools/c/8yZReqJRt8'
                 target='_blank'
@@ -26,18 +27,7 @@ const Registration = () => {
               page (PayPal account not required, select 'Pay as Guest').{" "}
             </p>
             <p>
-              Once both steps are complete we will be in touch to confirm your
-              place in the tournament. There will no longer be the need to send
-              a returnable deposit, however please be reminded that the entry
-              fee is non refundable*
-            </p>
-            <p>
-              *the only exception to this is if the tournament date needs to be
-              rescheduled due to a change in the return to netball roadmap due
-              to Covid. If the date needs to move and you can no longer field a
-              team for the rescheduled date, as long as notice is provided
-              within 7 days of the new date being communicated then we will
-              return your entry fee.{" "}
+              The week of the tournament we will send out your fixtures and planned timings for the day.
             </p>
           </>
         )}
@@ -56,7 +46,7 @@ const Registration = () => {
               {" PayPal "}
             </a>
             page (PayPal account not required, select 'Pay as Guest') to submit
-            your £40 entry fee.
+            your £45 entry fee.
           </p>
         )}
       </div>
