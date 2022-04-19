@@ -16,13 +16,6 @@ export default class Header extends Component {
               We look forward to welcoming everyone to this years netball tournament, to be held on Saturday 25th June 2022 at City Academy.
             </p>
 
-            <p>
-              If the roadmap dates change and we need to reschedule then we will
-              do so with a date in September, teams will be able to keep their
-              place or if the date doesn’t work can get their entry fee refunded
-              if notified within 7 days of the new date being announced.
-            </p>
-
             <Link
               activeClass='active'
               to='section3'
