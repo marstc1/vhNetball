@@ -176,8 +176,7 @@ export default class PreviousEvents extends Component {
             alt='Members of the Victoria Hawkins Netball Tournament committee being presented with a thank you for raising over £10000 for Nelsons Journey'
           />
           <p>
-            Our previous tournaments, as well as other fund raising activities
-            have helped us raise over £10000 for the fantastic Nelsons Journey.
+            We’ve spent the last 7 years raising money for Nelson’s Journey. When Covid prevented us holding the tournament in 2020 Lisa raised money through running her first marathon and Charlotte and Mark completed the Broads Walk challenge in 2021 to further increase the pot which now sits at c£16,000!
           </p>
           <p>
             This money will help Nelsons Journey support the hundreds of
