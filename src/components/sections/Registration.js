@@ -19,12 +19,12 @@ const Registration = () => {
               After submitting your request you will be prompted to submit your
               entry fee of £45 on our{" "}
               <a
-                href='https://paypal.me/pools/c/8yZReqJRt8'
+                href='https://www.collectionpot.com/pot/1804410/'
                 target='_blank'
                 rel='noopener noreferrer'>
-                {" PayPal "}
+                {" Collection Pot "}
               </a>{" "}
-              page (PayPal account not required, select 'Pay as Guest').{" "}
+              page (Collection Pot account not required).{" "}
             </p>
             <p>
               The week of the tournament we will send out your fixtures and planned timings for the day.
@@ -40,12 +40,12 @@ const Registration = () => {
           <p className='already-registered'>
             Already registered? Visit our{" "}
             <a
-              href='https://paypal.me/pools/c/8yZReqJRt8'
+              href='https://www.collectionpot.com/pot/1804410/'
               target='_blank'
               rel='noopener noreferrer'>
-              {" PayPal "}
+              {" Collection Pot "}
             </a>
-            page (PayPal account not required, select 'Pay as Guest') to submit
+            page (Collection Pot account not required) to submit
             your £45 entry fee.
           </p>
         )}

@@ -105,12 +105,12 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <p>
                 To complete your entry please submit the entry fee of £45 to our
                 <a
-                  href='https://paypal.me/pools/c/8yZReqJRt8'
+                  href='https://www.collectionpot.com/pot/1804410/'
                   target='_blank'
                   rel='noopener noreferrer'>
-                  {" PayPal "}
+                  {" Collection Pot "}
                 </a>
-                page (PayPal account not required, select 'Pay as Guest'),
+                page (Collection Pot account not required),
                 including your team name so that we can match your payment with
                 your entry. We will then be in touch to confirm details of the
                 day and next steps.
