@@ -40,16 +40,6 @@ export default class Victoria extends Component {
             provide. It’s a great honour to be able to help this local charity
             and have them take part in our day.
           </p>
-          <p>
-            Although we couldn’t hold the tournament last year due to COVID we
-            hope that this year we will reunite players and teams who both knew
-            Victoria or want to help us celebrate the memory of a fantastic
-            player throughout this special day. Every year we set new targets of
-            the amount we would love to raise for Nelson’s Journey, in September
-            2019 Mark and I were honoured to receive a huge thank you from
-            Nelsons Journey for hitting the £10,000 raised since the tournament
-            began in 2015.
-          </p>
           <p>We hope you will be able to join us on the day.</p>
         </div>
       </div>
