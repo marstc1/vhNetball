@@ -18,7 +18,7 @@ import "./css/forms.css";
 import "./css/footer.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 
-const registrationOpen = true;
+const registrationOpen = false;
 
 function App() {
   return (
