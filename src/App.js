@@ -17,8 +17,9 @@ import "./css/socialsBar.css";
 import "./css/forms.css";
 import "./css/footer.css";
 import "react-image-gallery/styles/css/image-gallery.css";
+import Sponsors from "./components/sections/Sponsors";
 
-const registrationOpen = false;
+const registrationOpen = true;
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Event />
       <PreviousEvents />
+      <Sponsors />
       {registrationOpen && <Registration />}
       <Victoria />
       <Footer />

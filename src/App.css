@@ -101,6 +101,12 @@ ul {
   list-style: none;
 }
 
+ul.list-unordered {
+  list-style: circle;
+  margin-left: 2em;
+  padding-bottom: 0.5em;
+}
+
 ol {
   padding-left: 3em;
 }

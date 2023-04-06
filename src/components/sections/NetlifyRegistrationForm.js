@@ -32,6 +32,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryEmail: "",
     isCompetitive: "",
     umpireName: "",
+    music: "",
   };
 
   var scroller = Scroll.scroller;
@@ -43,7 +44,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "EventRegistration_2022_v1", ...values }),
+      body: encode({ "form-name": "EventRegistration_2023_v1", ...values }),
     })
       .then(() => {
         resetForm({});
@@ -73,9 +74,11 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
       is: (val) => val === "Competitive - I am playing to win!",
       then: Yup.string().required("Please enter the name of your umpire"),
     }),
+    music: Yup.string().required("Please enter a song name and artist"),
   });
 
   const [competitive, setCompetitive] = useState(false);
+  const [mixedCompetitive, setMixedCompetitive] = useState(false);
 
   return (
     <Formik
@@ -103,7 +106,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                 Fantastic! - You have been registered
               </h3>
               <p>
-                To complete your entry please submit the entry fee of £45 to our
+                To complete your entry please submit the entry fee of £50 to our
                 <a
                   href='https://www.collectionpot.com/pot/1804410/'
                   target='_blank'
@@ -123,7 +126,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
         return (
           <>
             <form
-              name='EventRegistration_2022_v1'
+              name='EventRegistration_2023_v1'
               autoComplete='off'
               onSubmit={handleSubmit}
               method='post'
@@ -132,7 +135,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <input
                 type='hidden'
                 name='form-name'
-                value='EventRegistration_2022_v1'
+                value='EventRegistration_2023_v1'
               />
               <div hidden>
                 <input name='bot-field' />
@@ -266,29 +269,57 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <div className='segmentedControl'>
                 <fieldset>
                   <legend>How would you like to play?</legend>
-                  <label htmlFor='isCompetitiveY'>
+                  <label htmlFor='isCompetitiveWomens'>
                     <input
                       type='radio'
-                      value='Competitive - I am playing to win!'
-                      id='isCompetitiveY'
+                      value='Competitive - Womens'
+                      id='isCompetitiveWomens'
                       name='isCompetitive'
                       checked={
                         values.isCompetitive ===
-                        "Competitive - I am playing to win!"
+                        "Competitive - Womens"
                       }
                       onChange={() => {
                         setFieldValue(
                           "isCompetitive",
-                          "Competitive - I am playing to win!"
+                          "Competitive - Womens"
                         );
                         setCompetitive(true);
+                        setMixedCompetitive(false);
                       }}
                     />
                     <span
                       className={
                         errors.isCompetitive && touched.isCompetitive && "error"
                       }>
-                      Competitively
+                      Competitive - Womens
+                    </span>
+                  </label>
+
+                  <label htmlFor='isCompetitiveMixed'>
+                    <input
+                      type='radio'
+                      value='Competitive - Mixed'
+                      id='isCompetitiveMixed'
+                      name='isCompetitive'
+                      checked={
+                        values.isCompetitive ===
+                        "Competitive - Mixed"
+                      }
+                      onChange={() => {
+                        setFieldValue(
+                          "isCompetitive",
+                          "Competitive - Mixed"
+                        );
+                        setCompetitive(true);
+                        setMixedCompetitive(true);
+                      }}
+                    />
+                    <span
+                      className={
+                        errors.isCompetitive && touched.isCompetitive && "error"
+                      }>
+                      Competitive - Mixed
                     </span>
                   </label>
 
@@ -303,6 +334,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                         setFieldValue("isCompetitive", "Just for fun!");
                         setFieldValue("umpireName", "");
                         setCompetitive(false);
+                        setMixedCompetitive(false);
                       }}
                       onBlur={() => setErrors({})}
                     />
@@ -323,6 +355,25 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                   <div data-netlify-recaptcha='true'></div>
                 </div>
               </div>
+
+              {mixedCompetitive && (
+                <>
+                  <span><b>Mixed Netball (rules)</b><br /></span>
+                  <span>
+                    Mixed netball has modified rules around player eligibility:
+                  </span>
+
+                  <ul className='list-unordered'>
+                    <li>Mixed teams are only permitted to have a maximum of three (3) non-female players on court at any one time during a match and can only have one (1) non-female playing in the following groupings at any one time:</li>
+                    <ul className='list-unordered'>
+                      <li>GS and GA</li>
+                      <li>WA, C and WD; and</li>
+                      <li>GD and GK</li>
+                    </ul>
+                  </ul>
+                </>
+              )}
+
               {competitive && (
                 <>
                   <label htmlFor='umpireName'>Umpire Name</label>
@@ -348,6 +399,22 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                   )}
                 </>
               )}
+
+              <label htmlFor='music'>What music you would like to be played if your team gets into the play-offs?</label>
+              <input
+                type='text'
+                value={values.music}
+                id='music'
+                name='music'
+                placeholder='Enter a song name and artist'
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.music && touched.music && "error"}
+              />
+              {errors.music && touched.music && (
+                <div className='input-feedback'>{errors.music}</div>
+              )}
+
               <button
                 className='btn btn-primary right'
                 type='submit'

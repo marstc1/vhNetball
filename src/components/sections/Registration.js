@@ -17,7 +17,7 @@ const Registration = () => {
             </p>
             <p>
               After submitting your request you will be prompted to submit your
-              entry fee of £45 on our{" "}
+              entry fee of £50 on our{" "}
               <a
                 href='https://www.collectionpot.com/pot/1804410/'
                 target='_blank'
@@ -46,7 +46,7 @@ const Registration = () => {
               {" Collection Pot "}
             </a>
             page (Collection Pot account not required) to submit
-            your £45 entry fee.
+            your £50 entry fee.
           </p>
         )}
       </div>

@@ -55,7 +55,7 @@ form .btn:hover {
 
 .segmentedControl label {
   display: inline-block;
-  width: 50%;
+  margin-bottom: 2em;
 }
 
 .segmentedControl label input {
@@ -122,12 +122,16 @@ input.error {
   background-color: #fbdee6;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 800px) {
   form {
     padding: 1em 4em;
   }
 
   form .btn {
     margin-top: 0.5em;
+  }
+
+  .segmentedControl label {
+    width: 33.3%;
   }
 }

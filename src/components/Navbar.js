@@ -48,6 +48,17 @@ export default function Navbar() {
             <li>
               <Link
                 activeClass='active'
+                to='sectionSponsors'
+                spy={true}
+                smooth={true}
+                offset={offsetHeight}
+                duration={500}>
+                Sponsors
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass='active'
                 to='section3'
                 spy={true}
                 smooth={true}

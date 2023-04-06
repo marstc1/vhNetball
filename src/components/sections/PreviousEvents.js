@@ -169,14 +169,14 @@ export default class PreviousEvents extends Component {
       <div id='sectionPreviousEvents' className='section sectionPreviousEvents'>
         <div className='container'>
           <h2>Previous Events</h2>
-          <h3>We have raised over £10,000 for NELSON’S JOURNEY</h3>
+          <h3>Following last year's tournament, we brought our grand total raised for Nelson's Journey to £20,050.34!!!!</h3>
           <img
             className='thankYouPhoto'
             src={photo}
             alt='Members of the Victoria Hawkins Netball Tournament committee being presented with a thank you for raising over £10000 for Nelsons Journey'
           />
           <p>
-            We’ve spent the last 7 years raising money for Nelson’s Journey. When Covid prevented us holding the tournament in 2020 Lisa raised money through running her first marathon and Charlotte and Mark completed the Broads Walk challenge in 2021 to further increase the pot which now sits at c£16,000!
+            We’ve spent the last 8 years raising money for Nelson’s Journey. When Covid prevented us holding the tournament in 2020 Lisa raised money through running her first marathon and Charlotte and Mark completed the Broads Walk challenge in 2021 to further increase the pot.
           </p>
           <p>
             This money will help Nelsons Journey support the hundreds of
