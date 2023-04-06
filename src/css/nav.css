@@ -31,6 +31,8 @@ nav ul.menu {
   font-family: OpenSansBold;
   font-size: 0.8em;
   margin-top: 5px;
+  margin-left: -25px;
+  margin-right: -25px;
   padding: 5px 0 2px;
   border-top: 1px solid #222;
 }
