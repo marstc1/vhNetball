@@ -9,7 +9,7 @@ form legend {
 
 label,
 input {
-  display: block;
+  display: inline-table;
   width: 100%;
 }
 
