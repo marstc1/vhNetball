@@ -108,12 +108,12 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <p>
                 To complete your entry please submit the entry fee of £50 to our
                 <a
-                  href='https://www.collectionpot.com/pot/1804410/'
+                  href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00&reference=${values.teamName}`}
                   target='_blank'
                   rel='noopener noreferrer'>
-                  {" Collection Pot "}
+                  {" Just Giving "}
                 </a>
-                page (Collection Pot account not required),
+                page (Just Giving account not required),
                 including your team name so that we can match your payment with
                 your entry. We will then be in touch to confirm details of the
                 day and next steps.

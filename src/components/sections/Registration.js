@@ -19,12 +19,12 @@ const Registration = () => {
               After submitting your request you will be prompted to submit your
               entry fee of £50 on our{" "}
               <a
-                href='https://www.collectionpot.com/pot/1804410/'
+                href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
                 target='_blank'
                 rel='noopener noreferrer'>
-                {" Collection Pot "}
+                {" Just Giving "}
               </a>{" "}
-              page (Collection Pot account not required).{" "}
+              page (Just Giving account not required).{" "}
             </p>
             <p>
               The week of the tournament we will send out your fixtures and planned timings for the day.
@@ -40,12 +40,12 @@ const Registration = () => {
           <p className='already-registered'>
             Already registered? Visit our{" "}
             <a
-              href='https://www.collectionpot.com/pot/1804410/'
+              href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
               target='_blank'
               rel='noopener noreferrer'>
-              {" Collection Pot "}
+              {" Just Giving "}
             </a>
-            page (Collection Pot account not required) to submit
+            page (Just Giving account not required) to submit
             your £50 entry fee.
           </p>
         )}
