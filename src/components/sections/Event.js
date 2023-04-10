@@ -18,7 +18,7 @@ export default class Event extends Component {
             <p>
               We’ve had lots of great feedback over the years with the format
               and style of the tournament, so this year we plan to approach it
-              in the same way. The day will be split into 2 sessions, places
+              in the same way. The day will be split into 2 sessions for players 16+, places
               fill up quick so please enter your team today!
             </p>
 
