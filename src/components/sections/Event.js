@@ -137,7 +137,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Minimum Age</h3>
-                  <p>All players must be at least 14 years old</p>
+                  <p>All players must be at least 16 years old</p>
                 </div>
               </li>
             </ul>
