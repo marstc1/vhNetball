@@ -47,11 +47,11 @@ export default class Event extends Component {
             </p>
 
             <p>
-              <b>Women's competitive tournament:</b> for affiliated women players, in a competitive tournament. In previous years we have enjoyed welcoming a range of teams into this session, if we have enough teams like previous years we will create 2 groups with a semi and final to determine the winners. We will always try to group similar division teams together so that it's a really enjoyable afternoon.
+              <b>Women's competitive tournament:</b> for affiliated women players, in a competitive tournament. In previous years we have enjoyed welcoming a range of teams into this session, if we have enough teams like previous years we will create 2 groups with a semi and final to determine the winners. We will always try to group similar division teams together so that it's a really enjoyable afternoon.<br />Each team is required to provide a C award umpire. We may be able to accept someone who is an experienced beginner who is working towards their C award but this will depend on the number of experienced umpires we have.
             </p>
 
             <p>
-              <b>Mixed competitive tournament:</b> for affiliated mixed teams only. If we hit our targeted no of teams then there will be 2 groups with a semi and final to determine the winners. We are unable to accept all men's teams into this part of the tournament and will be following the England Mixed netball rules set out below:
+              <b>Mixed competitive tournament:</b> for affiliated mixed teams only. If we hit our targeted no of teams then there will be 2 groups with a semi and final to determine the winners.<br />Each team is required to provide a C award umpire. We may be able to accept someone who is an experienced beginner who is working towards their C award but this will depend on the number of experienced umpires we have.<br />We are unable to accept all men's teams into this part of the tournament and will be following the England Mixed netball rules set out below:
             </p>
 
             <span><b>Mixed Netball (rules)</b><br /></span>

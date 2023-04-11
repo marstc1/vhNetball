@@ -378,10 +378,18 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                 <>
                   <label htmlFor='umpireName'>Umpire Name</label>
                   <p class='smallHelp'>
+                    Each team is required to provide a C award umpire. We may be 
+                    able to accept someone who is an experienced beginner who is 
+                    working towards their C award but this will depend on the 
+                    number of experienced umpires we have.
+                  </p>
+
+                  <p class='smallHelp'>
                     Please note, your umpiring fixtures may be at the same time
                     as your playing fixtures so please ensure you can cover
                     both.
                   </p>
+
                   <input
                     type='text'
                     value={values.umpireName}
