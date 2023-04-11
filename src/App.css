@@ -261,6 +261,10 @@ footer a {
   font-weight: bold;
 }
 
+.section.sponsors {
+  background-color: lightgrey;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
