@@ -30,7 +30,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryContactName: "",
     secondaryContactNumber: "",
     secondaryEmail: "",
-    isCompetitive: "",
+    isCompetitive: "Competitive - Mixed",
     umpireName: "",
     music: "",
   };
@@ -269,10 +269,12 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <div className='segmentedControl'>
                 <fieldset>
                   <legend>How would you like to play?</legend>
-                  <label htmlFor='isCompetitiveWomens'>
+                  <p className="important">We now only have places for the mixed competitive tournament.  If you would like to be added to the reserves list for the women's competitive or fun tournaments please email: <a href='mailto:victoriahawkinsnetball@gmail.com' subject='Reserves request'>victoriahawkinsnetball@gmail.com</a></p>
+                  <label htmlFor='isCompetitiveWomens' className="disabled">
                     <input
                       type='radio'
                       value='Competitive - Womens'
+                      disabled
                       id='isCompetitiveWomens'
                       name='isCompetitive'
                       checked={
@@ -323,10 +325,11 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                     </span>
                   </label>
 
-                  <label htmlFor='isCompetitiveN'>
+                  <label htmlFor='isCompetitiveN' className="disabled">
                     <input
                       type='radio'
                       value='Just for fun!'
+                      disabled
                       id='isCompetitiveN'
                       name='isCompetitive'
                       checked={values.isCompetitive === "Just for fun!"}

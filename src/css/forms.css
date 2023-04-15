@@ -86,6 +86,16 @@ form .btn:hover {
   margin-top: 20px;
 }
 
+label.disabled span {
+  color: lightgrey;
+}
+
+.important {
+  padding-top: 0;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
 .input-feedback {
   color: var(--mainWhite);
   margin-top: -15px;
