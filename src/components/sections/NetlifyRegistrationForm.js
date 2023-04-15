@@ -77,8 +77,8 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     music: Yup.string().required("Please enter a song name and artist"),
   });
 
-  const [competitive, setCompetitive] = useState(false);
-  const [mixedCompetitive, setMixedCompetitive] = useState(false);
+  const [competitive, setCompetitive] = useState(true);
+  const [mixedCompetitive, setMixedCompetitive] = useState(true);
 
   return (
     <Formik
