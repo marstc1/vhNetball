@@ -27,7 +27,7 @@ export default class Header extends Component {
               offset={-90}
               duration={500}
               className='btn btn-primary right'>
-              Register Now
+              Sold out!
             </Link>
           </div>
         </div>
