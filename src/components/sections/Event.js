@@ -102,7 +102,7 @@ export default class Event extends Component {
                 <div className='listItem'>
                   <h3>Closing Date</h3>
                   <p>
-                    3rd June 2023
+                    3rd June 2024
                     <br /> unless places filled earlier
                   </p>
                 </div>
