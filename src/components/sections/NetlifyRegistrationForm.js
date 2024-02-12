@@ -30,7 +30,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryContactName: "",
     secondaryContactNumber: "",
     secondaryEmail: "",
-    isCompetitive: "Competitive - Mixed",
+    isCompetitive: "",
     umpireName: "",
     music: "",
   };
@@ -44,7 +44,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "EventRegistration_2023_v1", ...values }),
+      body: encode({ "form-name": "EventRegistration_2024_v1", ...values }),
     })
       .then(() => {
         resetForm({});
@@ -71,7 +71,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
     secondaryEmail: Yup.string().email().required("Please enter an email"),
     isCompetitive: Yup.string().required("Please select an option"),
     umpireName: Yup.string().when("isCompetitive", {
-      is: (val) => val === "Competitive - I am playing to win!",
+      is: (val) => val !== "Just for fun!",
       then: Yup.string().required("Please enter the name of your umpire"),
     }),
     music: Yup.string().required("Please enter a song name and artist"),
@@ -126,7 +126,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
         return (
           <>
             <form
-              name='EventRegistration_2023_v1'
+              name='EventRegistration_2024_v1'
               autoComplete='off'
               onSubmit={handleSubmit}
               method='post'
@@ -135,7 +135,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <input
                 type='hidden'
                 name='form-name'
-                value='EventRegistration_2023_v1'
+                value='EventRegistration_2024_v1'
               />
               <div hidden>
                 <input name='bot-field' />
@@ -269,12 +269,10 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <div className='segmentedControl'>
                 <fieldset>
                   <legend>How would you like to play?</legend>
-                  <p className="important">We now only have places for the mixed competitive tournament.  If you would like to be added to the reserves list for the women's competitive or fun tournaments please email: <a href='mailto:victoriahawkinsnetball@gmail.com' subject='Reserves request'>victoriahawkinsnetball@gmail.com</a></p>
-                  <label htmlFor='isCompetitiveWomens' className="disabled">
+                  <label htmlFor='isCompetitiveWomens'>
                     <input
                       type='radio'
                       value='Competitive - Womens'
-                      disabled
                       id='isCompetitiveWomens'
                       name='isCompetitive'
                       checked={
@@ -325,11 +323,10 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                     </span>
                   </label>
 
-                  <label htmlFor='isCompetitiveN' className="disabled">
+                  <label htmlFor='isCompetitiveN'>
                     <input
                       type='radio'
                       value='Just for fun!'
-                      disabled
                       id='isCompetitiveN'
                       name='isCompetitive'
                       checked={values.isCompetitive === "Just for fun!"}

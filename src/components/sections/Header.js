@@ -10,13 +10,13 @@ export default class Header extends Component {
       <header id='header' className='full-height-window'>
         <div className='container'>
           <div>
-            <h1>Saturday 24th June 2023</h1>
+            <h1>Saturday 29th June 2024</h1>
             <h2>City Academy</h2>
             <p>
-              We look forward to welcoming everyone to this year's netball tournament, to be held on Saturday 24th June 2023 at City Academy.
+              We look forward to welcoming everyone to this year's netball tournament, to be held on Saturday 24th June 2024 at City Academy.
             </p>
             <p>
-              This year we are really excited to announce the addition of the mixed competitive tournament that will run alongside the usual competitive tournament in the afternoon session. Full details in the About the event section along with rules for the mixed competitive tournament.
+              After a really successful tournament in 2023, we will once again be offering a mixed competitive tournament in the afternoon, that will run alongside the usual womens competitive tournament. Full details in the About the event section along with the rules for the mixed tournament.
             </p>
 
             <Link
@@ -27,7 +27,7 @@ export default class Header extends Component {
               offset={-90}
               duration={500}
               className='btn btn-primary right'>
-              Sold out!
+              Register Now
             </Link>
           </div>
         </div>

@@ -27,6 +27,9 @@ const Registration = () => {
               page (Just Giving account not required).{" "}
             </p>
             <p>
+              <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
+            </p>
+            <p>
               The week of the tournament we will send out your fixtures and planned timings for the day.
             </p>
           </>
@@ -37,17 +40,22 @@ const Registration = () => {
         </div>
 
         {formSubmitted === "false" && (
-          <p className='already-registered'>
-            Already registered? Visit our{" "}
-            <a
-              href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
-              target='_blank'
-              rel='noopener noreferrer'>
-              {" Just Giving "}
-            </a>
-            page (Just Giving account not required) to submit
-            your £50 entry fee.
-          </p>
+          <div className='already-registered'>
+            <p>
+              <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
+            </p>
+            <p>
+              Already registered? Visit our{" "}
+              <a
+                href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
+                target='_blank'
+                rel='noopener noreferrer'>
+                {" Just Giving "}
+              </a>
+              page (Just Giving account not required) to submit
+              your £50 entry fee.
+            </p>
+          </div>
         )}
       </div>
     </div>

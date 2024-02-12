@@ -24,7 +24,7 @@ export default class Event extends Component {
 
             <h3>The Morning Session</h3>
             <span class='small'>
-              Registration: 9.30am - Start: 10.00am - Finish: approx 12:30pm
+              Registration: 9.15am - Briefing 9.30am - Start: 9.45am - Finish: approx 12.30pm
             </span>
 
             <p>
@@ -39,7 +39,7 @@ export default class Event extends Component {
 
             <h3>The Afternoon Session</h3>
             <span class='small'>
-              Registration: 12:15pm Start: 12.45pm - approx 4.15pm
+              Registration: 11.35am - Briefing: 11.50am - Start: 12.15pm - Finish: approx 4.15pm
             </span>
 
             <p>
@@ -69,11 +69,11 @@ export default class Event extends Component {
             </ul>
 
             <p>
-              After the success of last years BBQ, we will be doing the same again this year and including a vegetarian option. We will also have a raffle, silent auction and cake stall (including vegan options) for you to enjoy when you aren’t playing.
+              Once again this year, Andrew will be back with our very own BBQ which will include a vegetarian option. We will also have a raffle, silent auction and cake stall (including vegan options) for you to enjoy when you aren't playing.
             </p>
 
             <p>
-              Spectators all welcome, so please come along for a fantastic day raising money for Nelsons Journey.
+              Over the years, we have really enjoyed seeing family and friends come along to watch netball and enjoy our stalls. All of this support helps us to raise even more money for Nelson's Journey.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Date</h3>
-                  <p>24th June 2023</p>
+                  <p>29th June 2024</p>
                 </div>
               </li>
               <li>
@@ -126,7 +126,7 @@ export default class Event extends Component {
                 </div>
                 <div className='listItem'>
                   <h3>Cost</h3>
-                  <p>£50 entry fee per team per session</p>
+                  <p>£50 entry fee per team per session, to be paid on submission of entry</p>
                 </div>
               </li>
               <li>
