@@ -113,10 +113,10 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                   rel='noopener noreferrer'>
                   {" Just Giving "}
                 </a>
-                page (Just Giving account not required),
-                including your team name so that we can match your payment with
-                your entry. We will then be in touch to confirm details of the
-                day and next steps.
+                page (Just Giving account not required).
+              </p>
+              <p>
+                <strong>Please include your team name so that we can match your payment with your entry.</strong>
               </p>
               <p>
                 <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
