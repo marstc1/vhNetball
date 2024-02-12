@@ -118,6 +118,9 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                 your entry. We will then be in touch to confirm details of the
                 day and next steps.
               </p>
+              <p>
+                <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
+              </p>
               <p>Thank you – we look forward to seeing you at this event!</p>
             </div>
           );
