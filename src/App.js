@@ -19,7 +19,7 @@ import "./css/footer.css";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Sponsors from "./components/sections/Sponsors";
 
-const registrationOpen = false;
+const registrationOpen = true;
 
 function App() {
   return (

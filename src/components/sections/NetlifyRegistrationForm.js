@@ -103,25 +103,22 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
           return (
             <div>
               <h3 className='pad-bottom-lg'>
-                Fantastic! - You have been registered
+                Great news! - You're registered
               </h3>
               <p>
-                To complete your entry please submit the entry fee of £50 to our
+                To secure your place in the tournament, please make your payment within the next 48 hours. <strong>Your entry is only confirmed upon reciept of payment.</strong> Don't delay, as <strong>places are limited.</strong>
+              </p>
+              <p>
+                To complete your entry, submit the £50 entry fee to our
                 <a
-                  href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00&reference=${values.teamName}`}
+                  href={`https://www.justgiving.com/page/vhnetballtournament2024?utm_medium=fundraising&utm_content=page%2Fvhnetballtournament2024&utm_source=copyLink&utm_campaign=pfp-share`}
                   target='_blank'
                   rel='noopener noreferrer'>
                   {" Just Giving "}
                 </a>
-                page (Just Giving account not required).
+                page (no account required). <strong>Be sure to include your team name for payment matching.</strong>
               </p>
-              <p>
-                <strong>Please include your team name so that we can match your payment with your entry.</strong>
-              </p>
-              <p>
-                <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
-              </p>
-              <p>Thank you – we look forward to seeing you at this event!</p>
+              <p>Thank you, and we can't wait to see you at the event!</p>
             </div>
           );
         }

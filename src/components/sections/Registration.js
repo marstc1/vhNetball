@@ -19,7 +19,7 @@ const Registration = () => {
               After submitting your request you will be prompted to submit your
               entry fee of £50 on our{" "}
               <a
-                href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
+                href={`https://www.justgiving.com/page/vhnetballtournament2024?utm_medium=fundraising&utm_content=page%2Fvhnetballtournament2024&utm_source=copyLink&utm_campaign=pfp-share`}
                 target='_blank'
                 rel='noopener noreferrer'>
                 {" Just Giving "}
@@ -47,7 +47,7 @@ const Registration = () => {
             <p>
               Already registered? Visit our{" "}
               <a
-                href={`https://www.justgiving.com/page/victoriahawkinsmemorial?newPage=true&amount=50.00`}
+                href={`https://www.justgiving.com/page/vhnetballtournament2024?utm_medium=fundraising&utm_content=page%2Fvhnetballtournament2024&utm_source=copyLink&utm_campaign=pfp-share`}
                 target='_blank'
                 rel='noopener noreferrer'>
                 {" Just Giving "}
