@@ -27,7 +27,7 @@ const Registration = () => {
               page (Just Giving account not required).{" "}
             </p>
             <p>
-              <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
+              <strong>Please make your payment within the next 48 hours. Your entry is only confirmed upon reciept of payment. Don't delay, as places are limited.</strong>
             </p>
             <p>
               The week of the tournament we will send out your fixtures and planned timings for the day.
@@ -42,7 +42,7 @@ const Registration = () => {
         {formSubmitted === "false" && (
           <div className='already-registered'>
             <p>
-              <strong>Your entry will be confirmed on receipt of this entry and the £50 entry fee - please ensure this is paid on entry, otherwise you may miss out on securing a place.</strong>
+              <strong>Please make your payment within the next 48 hours. Your entry is only confirmed upon reciept of payment. Don't delay, as places are limited.</strong>
             </p>
             <p>
               Already registered? Visit our{" "}
