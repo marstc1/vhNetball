@@ -269,6 +269,7 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
               <div className='segmentedControl'>
                 <fieldset>
                   <legend>How would you like to play?</legend>
+                  <p class='smallHelp'>All of the spaces in the fun competition have now been taken, only competitive spaces are available.</p>
                   <label htmlFor='isCompetitiveWomens'>
                     <input
                       type='radio'
@@ -323,8 +324,9 @@ const NetlifyRegistrationForm = ({ formSubmitHandler }) => {
                     </span>
                   </label>
 
-                  <label htmlFor='isCompetitiveN'>
+                  <label htmlFor='isCompetitiveN' className="disabled">
                     <input
+                      disabled
                       type='radio'
                       value='Just for fun!'
                       id='isCompetitiveN'
